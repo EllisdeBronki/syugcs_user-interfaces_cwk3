@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+b121c8609547fa19555037c43f1fc7e8 CMakeFiles/quaketool_autogen
