@@ -1,11 +1,15 @@
-// COMP2811 Coursework 2 sample solution: dialog
-
 #pragma once
 
 #include <QDialog>
 
 class QLineEdit;
 class QPushButton;
+
+/* -------------------------------------- **
+ * Watertool : Statistics (Header)        *
+ * Editor(s) : Alexander Del Brocco       *
+ * Module    : COMP2711 - User Interfaces *
+** -------------------------------------- */
 
 class StatsDialog: public QDialog
 {

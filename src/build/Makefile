@@ -117,61 +117,61 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named quaketool
+# Target rules for targets named watertool
 
 # Build rule for target.
-quaketool: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quaketool
-.PHONY : quaketool
+watertool: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 watertool
+.PHONY : watertool
 
 # fast build rule for target.
-quaketool/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/build
-.PHONY : quaketool/fast
+watertool/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/build
+.PHONY : watertool/fast
 
 #=============================================================================
-# Target rules for targets named quaketool_autogen
+# Target rules for targets named watertool_autogen
 
 # Build rule for target.
-quaketool_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quaketool_autogen
-.PHONY : quaketool_autogen
+watertool_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 watertool_autogen
+.PHONY : watertool_autogen
 
 # fast build rule for target.
-quaketool_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool_autogen.dir/build.make CMakeFiles/quaketool_autogen.dir/build
-.PHONY : quaketool_autogen/fast
+watertool_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool_autogen.dir/build.make CMakeFiles/watertool_autogen.dir/build
+.PHONY : watertool_autogen/fast
 
-dataset.o: dataset.cpp.o
-.PHONY : dataset.o
+hydroset.o: hydroset.cpp.o
+.PHONY : hydroset.o
 
 # target to build an object file
-dataset.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/dataset.cpp.o
-.PHONY : dataset.cpp.o
+hydroset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/hydroset.cpp.o
+.PHONY : hydroset.cpp.o
 
-dataset.i: dataset.cpp.i
-.PHONY : dataset.i
+hydroset.i: hydroset.cpp.i
+.PHONY : hydroset.i
 
 # target to preprocess a source file
-dataset.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/dataset.cpp.i
-.PHONY : dataset.cpp.i
+hydroset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/hydroset.cpp.i
+.PHONY : hydroset.cpp.i
 
-dataset.s: dataset.cpp.s
-.PHONY : dataset.s
+hydroset.s: hydroset.cpp.s
+.PHONY : hydroset.s
 
 # target to generate assembly for a file
-dataset.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/dataset.cpp.s
-.PHONY : dataset.cpp.s
+hydroset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/hydroset.cpp.s
+.PHONY : hydroset.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -179,7 +179,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -187,7 +187,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 model.o: model.cpp.o
@@ -195,7 +195,7 @@ model.o: model.cpp.o
 
 # target to build an object file
 model.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/model.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/model.cpp.o
 .PHONY : model.cpp.o
 
 model.i: model.cpp.i
@@ -203,7 +203,7 @@ model.i: model.cpp.i
 
 # target to preprocess a source file
 model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/model.cpp.i
 .PHONY : model.cpp.i
 
 model.s: model.cpp.s
@@ -211,63 +211,15 @@ model.s: model.cpp.s
 
 # target to generate assembly for a file
 model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/model.cpp.s
 .PHONY : model.cpp.s
-
-quake.o: quake.cpp.o
-.PHONY : quake.o
-
-# target to build an object file
-quake.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/quake.cpp.o
-.PHONY : quake.cpp.o
-
-quake.i: quake.cpp.i
-.PHONY : quake.i
-
-# target to preprocess a source file
-quake.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/quake.cpp.i
-.PHONY : quake.cpp.i
-
-quake.s: quake.cpp.s
-.PHONY : quake.s
-
-# target to generate assembly for a file
-quake.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/quake.cpp.s
-.PHONY : quake.cpp.s
-
-quaketool_autogen/mocs_compilation.o: quaketool_autogen/mocs_compilation.cpp.o
-.PHONY : quaketool_autogen/mocs_compilation.o
-
-# target to build an object file
-quaketool_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/quaketool_autogen/mocs_compilation.cpp.o
-.PHONY : quaketool_autogen/mocs_compilation.cpp.o
-
-quaketool_autogen/mocs_compilation.i: quaketool_autogen/mocs_compilation.cpp.i
-.PHONY : quaketool_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-quaketool_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/quaketool_autogen/mocs_compilation.cpp.i
-.PHONY : quaketool_autogen/mocs_compilation.cpp.i
-
-quaketool_autogen/mocs_compilation.s: quaketool_autogen/mocs_compilation.cpp.s
-.PHONY : quaketool_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-quaketool_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/quaketool_autogen/mocs_compilation.cpp.s
-.PHONY : quaketool_autogen/mocs_compilation.cpp.s
 
 stats.o: stats.cpp.o
 .PHONY : stats.o
 
 # target to build an object file
 stats.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/stats.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/stats.cpp.o
 .PHONY : stats.cpp.o
 
 stats.i: stats.cpp.i
@@ -275,7 +227,7 @@ stats.i: stats.cpp.i
 
 # target to preprocess a source file
 stats.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/stats.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/stats.cpp.i
 .PHONY : stats.cpp.i
 
 stats.s: stats.cpp.s
@@ -283,15 +235,63 @@ stats.s: stats.cpp.s
 
 # target to generate assembly for a file
 stats.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/stats.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/stats.cpp.s
 .PHONY : stats.cpp.s
+
+waterbody.o: waterbody.cpp.o
+.PHONY : waterbody.o
+
+# target to build an object file
+waterbody.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/waterbody.cpp.o
+.PHONY : waterbody.cpp.o
+
+waterbody.i: waterbody.cpp.i
+.PHONY : waterbody.i
+
+# target to preprocess a source file
+waterbody.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/waterbody.cpp.i
+.PHONY : waterbody.cpp.i
+
+waterbody.s: waterbody.cpp.s
+.PHONY : waterbody.s
+
+# target to generate assembly for a file
+waterbody.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/waterbody.cpp.s
+.PHONY : waterbody.cpp.s
+
+watertool_autogen/mocs_compilation.o: watertool_autogen/mocs_compilation.cpp.o
+.PHONY : watertool_autogen/mocs_compilation.o
+
+# target to build an object file
+watertool_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/watertool_autogen/mocs_compilation.cpp.o
+.PHONY : watertool_autogen/mocs_compilation.cpp.o
+
+watertool_autogen/mocs_compilation.i: watertool_autogen/mocs_compilation.cpp.i
+.PHONY : watertool_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+watertool_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/watertool_autogen/mocs_compilation.cpp.i
+.PHONY : watertool_autogen/mocs_compilation.cpp.i
+
+watertool_autogen/mocs_compilation.s: watertool_autogen/mocs_compilation.cpp.s
+.PHONY : watertool_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+watertool_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/watertool_autogen/mocs_compilation.cpp.s
+.PHONY : watertool_autogen/mocs_compilation.cpp.s
 
 window.o: window.cpp.o
 .PHONY : window.o
 
 # target to build an object file
 window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/window.cpp.o
 .PHONY : window.cpp.o
 
 window.i: window.cpp.i
@@ -299,7 +299,7 @@ window.i: window.cpp.i
 
 # target to preprocess a source file
 window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/window.cpp.i
 .PHONY : window.cpp.i
 
 window.s: window.cpp.s
@@ -307,7 +307,7 @@ window.s: window.cpp.s
 
 # target to generate assembly for a file
 window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaketool.dir/build.make CMakeFiles/quaketool.dir/window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/window.cpp.s
 .PHONY : window.cpp.s
 
 # Help Target
@@ -318,26 +318,26 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... quaketool_autogen"
-	@echo "... quaketool"
-	@echo "... dataset.o"
-	@echo "... dataset.i"
-	@echo "... dataset.s"
+	@echo "... watertool_autogen"
+	@echo "... watertool"
+	@echo "... hydroset.o"
+	@echo "... hydroset.i"
+	@echo "... hydroset.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... model.o"
 	@echo "... model.i"
 	@echo "... model.s"
-	@echo "... quake.o"
-	@echo "... quake.i"
-	@echo "... quake.s"
-	@echo "... quaketool_autogen/mocs_compilation.o"
-	@echo "... quaketool_autogen/mocs_compilation.i"
-	@echo "... quaketool_autogen/mocs_compilation.s"
 	@echo "... stats.o"
 	@echo "... stats.i"
 	@echo "... stats.s"
+	@echo "... waterbody.o"
+	@echo "... waterbody.i"
+	@echo "... waterbody.s"
+	@echo "... watertool_autogen/mocs_compilation.o"
+	@echo "... watertool_autogen/mocs_compilation.i"
+	@echo "... watertool_autogen/mocs_compilation.s"
 	@echo "... window.o"
 	@echo "... window.i"
 	@echo "... window.s"

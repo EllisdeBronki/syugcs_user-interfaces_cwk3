@@ -1,17 +1,19 @@
-// COMP2811 Coursework 2: data model
+#include "hydromodel.hpp"
 
-#include "model.hpp"
+/* -------------------------------------- **
+ * Watertool : Hydromodel                 *
+ * Editor(s) : Alexander Del Brocco       *
+ * Module    : COMP2711 - User Interfaces *
+** -------------------------------------- */
 
-
-void QuakeModel::updateFromFile(const QString& filename)
+void Hydromodel::updateFromFile(const QString& filename)
 {
   beginResetModel();
-  dataset.loadData(filename.toStdString());
+  hydroset.loadData(filename.toStdString());
   endResetModel();
 }
 
-
-QVariant QuakeModel::data(const QModelIndex& index, int role) const
+QVariant Hydromodel::data(const QModelIndex& index, int role) const
 {
   if (!index.isValid()) {
     return QVariant();
@@ -21,7 +23,7 @@ QVariant QuakeModel::data(const QModelIndex& index, int role) const
     return int(Qt::AlignRight | Qt::AlignVCenter);
   }
   else if (role == Qt::DisplayRole) {
-    Quake q = dataset[index.row()];
+    Waterbody q = hydroset[index.row()];
     switch (index.column()) {
       case 0: return QVariant(q.getTime().c_str());
       case 1: return QVariant(q.getLatitude());
@@ -35,7 +37,7 @@ QVariant QuakeModel::data(const QModelIndex& index, int role) const
 }
 
 
-QVariant QuakeModel::headerData(int section, Qt::Orientation orientation, int role) const
+QVariant Hydromodel::headerData(int section, Qt::Orientation orientation, int role) const
 {
   if (role != Qt::DisplayRole) {
     return QVariant();

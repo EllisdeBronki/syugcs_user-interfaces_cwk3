@@ -1,9 +1,7 @@
-// COMP2811 Coursework 2 sample solution: main window
-
 #pragma once
 
 #include <QMainWindow>
-#include "model.hpp"
+#include "hydromodel.hpp"
 
 class QString;
 class QComboBox;
@@ -12,12 +10,24 @@ class QPushButton;
 class QTableView;
 class StatsDialog;
 
-class QuakeWindow: public QMainWindow
+/* -------------------------------------- **
+ * Watertool : Water Window (Header)      *
+ * Editor(s) : Alexander Del Brocco       *
+ * Module    : COMP2711 - User Interfaces *
+** -------------------------------------- */
+
+/* ----------------------------------------------------------------------- **
+ * Watertool Waterbody Window :                                            *
+ *                                                                         *
+ *    Renders the main layout of the appliaction from QMainWindow. The     *
+** ----------------------------------------------------------------------- */
+
+class WaterbodyWindow: public QMainWindow
 {
   Q_OBJECT
 
   public:
-    QuakeWindow();
+    WaterbodyWindow();
 
   private:
     void createMainWidget();
@@ -28,7 +38,7 @@ class QuakeWindow: public QMainWindow
     void addFileMenu();
     void addHelpMenu();
 
-    QuakeModel model;          // data model used by table
+    Hydromodel model;          // data model used by table
     QString dataLocation;      // location of CSV data files
     QComboBox* significance;   // selector for quake feed significance level
     QComboBox* period;         // selector for quake feed time period

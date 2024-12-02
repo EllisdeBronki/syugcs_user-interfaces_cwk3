@@ -1,5 +1,3 @@
-// COMP2811 Coursework 2 sample solution: main window
-
 #include <QtWidgets>
 #include <stdexcept>
 #include <iostream>
@@ -8,8 +6,13 @@
 
 static const int MIN_WIDTH = 620;
 
+/* -------------------------------------- **
+ * Watertool : Water Window               *
+ * Editor(s) : Alexander Del Brocco       *
+ * Module    : COMP2711 - User Interfaces *
+** -------------------------------------- */
 
-QuakeWindow::QuakeWindow(): QMainWindow(), statsDialog(nullptr)
+WaterbodyWindow::WaterbodyWindow(): QMainWindow(), statsDialog(nullptr)
 {
   createMainWidget();
   createFileSelectors();
@@ -20,11 +23,11 @@ QuakeWindow::QuakeWindow(): QMainWindow(), statsDialog(nullptr)
   addHelpMenu();
 
   setMinimumWidth(MIN_WIDTH);
-  setWindowTitle("Quake Tool");
+  setWindowTitle("Waterbody Tool");
 }
 
 
-void QuakeWindow::createMainWidget()
+void WaterbodyWindow::createMainWidget()
 {
   table = new QTableView();
   table->setModel(&model);
@@ -36,7 +39,7 @@ void QuakeWindow::createMainWidget()
 }
 
 
-void QuakeWindow::createFileSelectors()
+void WaterbodyWindow::createFileSelectors()
 {
   QStringList significanceOptions;
   significanceOptions << "significant" << "4.5" << "2.5" << "1.0" << "all";
@@ -50,7 +53,7 @@ void QuakeWindow::createFileSelectors()
 }
 
 
-void QuakeWindow::createButtons()
+void WaterbodyWindow::createButtons()
 {
   loadButton = new QPushButton("Load");
   statsButton = new QPushButton("Stats");
@@ -60,7 +63,7 @@ void QuakeWindow::createButtons()
 }
 
 
-void QuakeWindow::createToolBar()
+void WaterbodyWindow::createToolBar()
 {
   QToolBar* toolBar = new QToolBar();
 
@@ -83,7 +86,7 @@ void QuakeWindow::createToolBar()
 }
 
 
-void QuakeWindow::createStatusBar()
+void WaterbodyWindow::createStatusBar()
 {
   fileInfo = new QLabel("Current file: <none>");
   QStatusBar* status = statusBar();
@@ -91,7 +94,7 @@ void QuakeWindow::createStatusBar()
 }
 
 
-void QuakeWindow::addFileMenu()
+void WaterbodyWindow::addFileMenu()
 {
   QAction* locAction = new QAction("Set Data &Location", this);
   locAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_L));
@@ -107,7 +110,7 @@ void QuakeWindow::addFileMenu()
 }
 
 
-void QuakeWindow::addHelpMenu()
+void WaterbodyWindow::addHelpMenu()
 {
   QAction* aboutAction = new QAction("&About", this);
   connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
@@ -121,7 +124,7 @@ void QuakeWindow::addHelpMenu()
 }
 
 
-void QuakeWindow::setDataLocation()
+void WaterbodyWindow::setDataLocation()
 {
   QString directory = QFileDialog::getExistingDirectory(
     this, "Data Location", ".",
@@ -133,7 +136,7 @@ void QuakeWindow::setDataLocation()
 }
 
 
-void QuakeWindow::openCSV()
+void WaterbodyWindow::openCSV()
 {
   if (dataLocation == "") {
     QMessageBox::critical(this, "Data Location Error",
@@ -165,7 +168,7 @@ void QuakeWindow::openCSV()
 }
 
 
-void QuakeWindow::displayStats()
+void WaterbodyWindow::displayStats()
 {
   if (model.hasData()) {
     if (statsDialog == nullptr) {
@@ -181,10 +184,10 @@ void QuakeWindow::displayStats()
 }
 
 
-void QuakeWindow::about()
+void WaterbodyWindow::about()
 {
-  QMessageBox::about(this, "About Quake Tool",
-    "Quake Tool displays and analyzes earthquake data loaded from"
+  QMessageBox::about(this, "About Waterbody Tool",
+    "Waterbody Tool displays and analyzes earthquake data loaded from"
     "a CSV file produced by the USGS Earthquake Hazards Program.\n\n"
     "(c) 2024 Nick Efford");
 }

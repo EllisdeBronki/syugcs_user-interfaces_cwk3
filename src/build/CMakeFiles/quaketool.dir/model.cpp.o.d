@@ -274,8 +274,8 @@ CMakeFiles/quaketool.dir/model.cpp.o: \
  /usr/include/qt6/QtCore/qshareddata_impl.h \
  /usr/include/qt6/QtCore/qset.h /usr/include/qt6/QtCore/qvarlengtharray.h \
  /usr/include/qt6/QtCore/q23utility.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/dataset.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/quake.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/basic_ios.h \
  /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \

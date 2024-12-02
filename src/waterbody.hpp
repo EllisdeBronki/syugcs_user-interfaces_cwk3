@@ -1,5 +1,3 @@
-// COMP2811 Coursework 1 sample solution: Quake class
-
 #pragma once
 
 #include <string>
@@ -10,10 +8,16 @@ static const double MAX_LATITUDE = 90.0;
 static const double MIN_LONGITUDE = -180.0;
 static const double MAX_LONGITUDE = 180.0;
 
-class Quake
+/* -------------------------------------- **
+ * Watertool : Waterbody (Header)         *
+ * Editor(s) : Alexander Del Brocco       *
+ * Module    : COMP2711 - User Interfaces *
+** -------------------------------------- */
+
+class Waterbody
 {
   public:
-    Quake(const std::string&, double, double, double, double);
+    Waterbody(const std::string&, double, double, double, double);
     std::string getTime() const { return time; }
     double getLatitude() const { return latitude; }
     double getLongitude() const { return longitude; }
@@ -28,4 +32,4 @@ class Quake
     double magnitude;
 };
 
-std::ostream& operator << (std::ostream&, const Quake&);
+std::ostream& operator << (std::ostream&, const Waterbody&);

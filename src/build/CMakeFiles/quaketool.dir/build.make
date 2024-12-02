@@ -97,33 +97,33 @@ CMakeFiles/quaketool.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quaketool.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/main.cpp -o CMakeFiles/quaketool.dir/main.cpp.s
 
-CMakeFiles/quaketool.dir/quake.cpp.o: CMakeFiles/quaketool.dir/flags.make
-CMakeFiles/quaketool.dir/quake.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/quake.cpp
-CMakeFiles/quaketool.dir/quake.cpp.o: CMakeFiles/quaketool.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/quaketool.dir/quake.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quaketool.dir/quake.cpp.o -MF CMakeFiles/quaketool.dir/quake.cpp.o.d -o CMakeFiles/quaketool.dir/quake.cpp.o -c /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/quake.cpp
+CMakeFiles/quaketool.dir/waterbody.cpp.o: CMakeFiles/quaketool.dir/flags.make
+CMakeFiles/quaketool.dir/waterbody.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.cpp
+CMakeFiles/quaketool.dir/waterbody.cpp.o: CMakeFiles/quaketool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/quaketool.dir/waterbody.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quaketool.dir/waterbody.cpp.o -MF CMakeFiles/quaketool.dir/waterbody.cpp.o.d -o CMakeFiles/quaketool.dir/waterbody.cpp.o -c /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.cpp
 
-CMakeFiles/quaketool.dir/quake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quaketool.dir/quake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/quake.cpp > CMakeFiles/quaketool.dir/quake.cpp.i
+CMakeFiles/quaketool.dir/waterbody.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quaketool.dir/waterbody.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.cpp > CMakeFiles/quaketool.dir/waterbody.cpp.i
 
-CMakeFiles/quaketool.dir/quake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quaketool.dir/quake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/quake.cpp -o CMakeFiles/quaketool.dir/quake.cpp.s
+CMakeFiles/quaketool.dir/waterbody.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quaketool.dir/waterbody.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.cpp -o CMakeFiles/quaketool.dir/waterbody.cpp.s
 
-CMakeFiles/quaketool.dir/dataset.cpp.o: CMakeFiles/quaketool.dir/flags.make
-CMakeFiles/quaketool.dir/dataset.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/dataset.cpp
-CMakeFiles/quaketool.dir/dataset.cpp.o: CMakeFiles/quaketool.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/quaketool.dir/dataset.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quaketool.dir/dataset.cpp.o -MF CMakeFiles/quaketool.dir/dataset.cpp.o.d -o CMakeFiles/quaketool.dir/dataset.cpp.o -c /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/dataset.cpp
+CMakeFiles/quaketool.dir/hydroset.cpp.o: CMakeFiles/quaketool.dir/flags.make
+CMakeFiles/quaketool.dir/hydroset.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.cpp
+CMakeFiles/quaketool.dir/hydroset.cpp.o: CMakeFiles/quaketool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/quaketool.dir/hydroset.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quaketool.dir/hydroset.cpp.o -MF CMakeFiles/quaketool.dir/hydroset.cpp.o.d -o CMakeFiles/quaketool.dir/hydroset.cpp.o -c /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.cpp
 
-CMakeFiles/quaketool.dir/dataset.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quaketool.dir/dataset.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/dataset.cpp > CMakeFiles/quaketool.dir/dataset.cpp.i
+CMakeFiles/quaketool.dir/hydroset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/quaketool.dir/hydroset.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.cpp > CMakeFiles/quaketool.dir/hydroset.cpp.i
 
-CMakeFiles/quaketool.dir/dataset.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quaketool.dir/dataset.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/dataset.cpp -o CMakeFiles/quaketool.dir/dataset.cpp.s
+CMakeFiles/quaketool.dir/hydroset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/quaketool.dir/hydroset.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.cpp -o CMakeFiles/quaketool.dir/hydroset.cpp.s
 
 CMakeFiles/quaketool.dir/model.cpp.o: CMakeFiles/quaketool.dir/flags.make
 CMakeFiles/quaketool.dir/model.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.cpp
@@ -171,8 +171,8 @@ CMakeFiles/quaketool.dir/stats.cpp.s: cmake_force
 quaketool_OBJECTS = \
 "CMakeFiles/quaketool.dir/quaketool_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/quaketool.dir/main.cpp.o" \
-"CMakeFiles/quaketool.dir/quake.cpp.o" \
-"CMakeFiles/quaketool.dir/dataset.cpp.o" \
+"CMakeFiles/quaketool.dir/waterbody.cpp.o" \
+"CMakeFiles/quaketool.dir/hydroset.cpp.o" \
 "CMakeFiles/quaketool.dir/model.cpp.o" \
 "CMakeFiles/quaketool.dir/window.cpp.o" \
 "CMakeFiles/quaketool.dir/stats.cpp.o"
@@ -182,8 +182,8 @@ quaketool_EXTERNAL_OBJECTS =
 
 quaketool: CMakeFiles/quaketool.dir/quaketool_autogen/mocs_compilation.cpp.o
 quaketool: CMakeFiles/quaketool.dir/main.cpp.o
-quaketool: CMakeFiles/quaketool.dir/quake.cpp.o
-quaketool: CMakeFiles/quaketool.dir/dataset.cpp.o
+quaketool: CMakeFiles/quaketool.dir/waterbody.cpp.o
+quaketool: CMakeFiles/quaketool.dir/hydroset.cpp.o
 quaketool: CMakeFiles/quaketool.dir/model.cpp.o
 quaketool: CMakeFiles/quaketool.dir/window.cpp.o
 quaketool: CMakeFiles/quaketool.dir/stats.cpp.o
