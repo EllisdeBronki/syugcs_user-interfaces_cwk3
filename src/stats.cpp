@@ -1,14 +1,17 @@
-// COMP2811 Coursework 2 sample solution: dialog
-
 #include <QtWidgets>
 #include "stats.hpp"
 
+/* -------------------------------------- **
+ * Watertool : Statistics                 *
+ * Editor(s) : Alexander Del Brocco       *
+ * Module    : COMP2711 - User Interfaces *
+** -------------------------------------- */
 
 StatsDialog::StatsDialog(QWidget* parent): QDialog(parent)
 {
   createWidgets();
   arrangeWidgets();
-  setWindowTitle("Quake Stats");
+  setWindowTitle("Waterbody Stats");
 }
 
 

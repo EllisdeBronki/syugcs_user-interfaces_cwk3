@@ -931,7 +931,7 @@ CMakeFiles/quaketool.dir/window.cpp.o: \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.hpp \
  /usr/include/qt6/QtCore/QAbstractTableModel \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/dataset.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/quake.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.hpp \
  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/stats.hpp \
  /usr/include/qt6/QtWidgets/QDialog
