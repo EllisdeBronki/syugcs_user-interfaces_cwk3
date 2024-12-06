@@ -17,34 +17,33 @@ static const double MAX_LONGITUDE = 180.0;
 class Waterbody
 {
   public:
-    Waterbody(const std::string&, double, double, double, double);
-    double getLatitude() const { return latitude; }
-    double getLongitude() const { return longitude; }
-    double getDepth() const { return depth; }
-    double getMagnitude() const { return magnitude; }
+    Waterbody(const std::string&, const std::string&, const std::string&, const std::string&, int, char, double, const std::string&, const std::string&, bool);
+    string getSamplingPoint() const { return samplingPoint; }
+    string getTime() const { return time; }
+    string getDeterminand() const { return determinand; }
+    string getDeterminandDefinition() const { return determinandDefinition; }
 
-    std::string getName() const { return name; }
-    std::string getType() const { return type; }
-    std::string getCoords() const { return coords; }
-    std::string getTime() const { return time; }
-    std::string getPollutant() const { return pollutant; }
-    float getResult() const { return result; }
-    std::string getUnit() const { return unit; }
+    int getDeterminandNotation(){ return determinandNotation; }
+
+    char getResultQualifier() const { return resultQualifier; }
+    double getResult() const { return result; }
+    std::string getDeterminandUnit() const { return determinandUnit; }
+    std::string getSampledMaterialType() const { return sampledMaterialType; }
+    bool getSampleCompliant() const { return sampleCompliant; }
 
   private:
-    double latitude;
-    double longitude;
-    double depth;
-    double magnitude;
-
-    std::string name;
-    std::string type;
-    std::string coords;
+    std::string samplingPoint;
     std::string time;
+    std::string determinand;
+    std::string determinandDefinition;
 
-    std::string pollutant;
-    float result;
-    std::string unit;
+    int determinandNotation;
+    char resultQualifier;
+    double result;
+
+    std::string determinandUnit;
+    std::string sampledMaterialType;
+    bool sampleCompliant;
 
 };
 
