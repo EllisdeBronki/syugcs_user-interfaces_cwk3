@@ -10,7 +10,7 @@ static const double MAX_LONGITUDE = 180.0;
 
 /* -------------------------------------- **
  * Watertool : Waterbody (Header)         *
- * Editor(s) : Alexander Del Brocco       *
+ * Editor(s) : Alexander Del Brocco, Tom O*
  * Module    : COMP2711 - User Interfaces *
 ** -------------------------------------- */
 
