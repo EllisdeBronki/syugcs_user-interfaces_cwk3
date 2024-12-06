@@ -23,7 +23,7 @@ class Waterbody
     string getDeterminand() const { return determinand; }
     string getDeterminandDefinition() const { return determinandDefinition; }
 
-    int getDeterminandNotation(){ return determinandNotation; }
+    int getDeterminandNotation() const { return determinandNotation; }
 
     char getResultQualifier() const { return resultQualifier; }
     double getResult() const { return result; }

@@ -10,47 +10,26 @@ using namespace std;
  * Module    : COMP2711 - User Interfaces *
 ** -------------------------------------- */
 
-Waterbody::Waterbody(const string& tm, double lat, double lon, double dep, double mag):
-  time(tm), latitude(lat), longitude(lon), depth(dep), magnitude(mag)
+Waterbody::Waterbody(const std::string& location, const std::string& tm, const std::string& pollutant, const std::string& pollutantInfo, int pollutantNotation, char resQualifier, double res, const std::string& unit, const std::string& matType, bool compliant):
+  //time(tm), latitude(lat), longitude(lon), depth(dep), magnitude(mag)
+  samplingPoint(location), time(tm), determinand(pollutant), determinandDefinition(pollutantInfo), determinandNotation(pollutantNotation), resultQualifier(resQualifier), result(res), determinandUnit(unit), sampledMaterialType(matType), sampleCompliant(compliant);
 {
   ostringstream error;
-
-  if (latitude < MIN_LATITUDE or latitude > MAX_LATITUDE) {
-    error << "Invalid latitude: " << latitude;
-    throw out_of_range(error.str());
-  }
-
-  if (longitude < MIN_LONGITUDE or longitude > MAX_LONGITUDE) {
-    error << "Invalid longitude: " << longitude;
-    throw out_of_range(error.str());
-  }
-
-  if (depth < 0.0) {
-    error << "Invalid depth: " << depth;
-    throw out_of_range(error.str());
-  }
-
-  if (magnitude < 0.0) {
-    error << "Invalid magnitude: " << magnitude;
-    throw out_of_range(error.str());
-  }
-
-  name = "";
-  type = "";
-  coords = "";
-  time = "";
-
-  pollutant = "";
-  result = 0.0;
-  unit = "";
+  error << "Error Found";
+  // Add any error checking in here - I'm sure we will find out what are the errors later :)
 }
 
 
 ostream& operator<<(ostream& out, const Waterbody& waterbody)
 {
-  return out << "Time: " << waterbody.getTime()
-             << "\nLatitude: " << waterbody.getLatitude() << " deg"
-             << "\nLongitude: " << waterbody.getLongitude() << " deg"
-             << "\nDepth: " << waterbody.getDepth() << " km"
-             << "\nMagnitude: " << waterbody.getMagnitude() << endl;
+  return out << "Location: " << waterbody.getSamplingPoint()
+             << "\nTime: " << waterbody.getTime()
+             << "\nPollutant: " << waterbody.getDeterminand()
+             << "\nPollutant Info: " << waterbody.getDeterminandDefinition() 
+             << "\nPollutant Code: " << waterbody.getDeterminandNotation() 
+             << "\nResult Qualifier: " << waterbody.getResultQualifier()
+             << "\nResult: " << waterbody.getResult() << " " << waterbody.getDeterminandUnit()
+             << "\nMaterial Sampled: " << waterbody.getSampledMaterialType()
+             << "\nCompliant?: " << waterbody.getSampleCompliant()
+             << endl;
 }
