@@ -18,18 +18,34 @@ class Waterbody
 {
   public:
     Waterbody(const std::string&, double, double, double, double);
-    std::string getTime() const { return time; }
     double getLatitude() const { return latitude; }
     double getLongitude() const { return longitude; }
     double getDepth() const { return depth; }
     double getMagnitude() const { return magnitude; }
 
+    std::string getName() const { return name; }
+    std::string getType() const { return type; }
+    std::string getCoords() const { return coords; }
+    std::string getTime() const { return time; }
+    std::string getPollutant() const { return pollutant; }
+    float getResult() const { return result; }
+    std::string getUnit() const { return unit; }
+
   private:
-    std::string time;
     double latitude;
     double longitude;
     double depth;
     double magnitude;
+
+    std::string name;
+    std::string type;
+    std::string coords;
+    std::string time;
+
+    std::string pollutant;
+    float result;
+    std::string unit;
+
 };
 
 std::ostream& operator << (std::ostream&, const Waterbody&);

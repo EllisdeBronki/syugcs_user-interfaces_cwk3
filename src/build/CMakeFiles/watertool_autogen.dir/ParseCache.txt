@@ -8,8 +8,8 @@
  mmc:Q_OBJECT
  mdp:/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/window.hpp
  mdp:/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/moc_predefs.h
+ mdp:/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.hpp
  mdp:/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.hpp
- mdp:/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.hpp
  mdp:/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.hpp
  mdp:/usr/include/alloca.h
  mdp:/usr/include/asm-generic/errno-base.h
@@ -431,3 +431,5 @@
 /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/stats.hpp
 /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.hpp
 /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.hpp
+/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.hpp
+/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.cpp

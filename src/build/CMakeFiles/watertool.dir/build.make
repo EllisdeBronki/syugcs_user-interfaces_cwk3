@@ -125,19 +125,19 @@ CMakeFiles/watertool.dir/hydroset.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/watertool.dir/hydroset.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.cpp -o CMakeFiles/watertool.dir/hydroset.cpp.s
 
-CMakeFiles/watertool.dir/model.cpp.o: CMakeFiles/watertool.dir/flags.make
-CMakeFiles/watertool.dir/model.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.cpp
-CMakeFiles/watertool.dir/model.cpp.o: CMakeFiles/watertool.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/watertool.dir/model.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/watertool.dir/model.cpp.o -MF CMakeFiles/watertool.dir/model.cpp.o.d -o CMakeFiles/watertool.dir/model.cpp.o -c /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.cpp
+CMakeFiles/watertool.dir/hydromodel.cpp.o: CMakeFiles/watertool.dir/flags.make
+CMakeFiles/watertool.dir/hydromodel.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.cpp
+CMakeFiles/watertool.dir/hydromodel.cpp.o: CMakeFiles/watertool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/watertool.dir/hydromodel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/watertool.dir/hydromodel.cpp.o -MF CMakeFiles/watertool.dir/hydromodel.cpp.o.d -o CMakeFiles/watertool.dir/hydromodel.cpp.o -c /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.cpp
 
-CMakeFiles/watertool.dir/model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/watertool.dir/model.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.cpp > CMakeFiles/watertool.dir/model.cpp.i
+CMakeFiles/watertool.dir/hydromodel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/watertool.dir/hydromodel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.cpp > CMakeFiles/watertool.dir/hydromodel.cpp.i
 
-CMakeFiles/watertool.dir/model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/watertool.dir/model.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.cpp -o CMakeFiles/watertool.dir/model.cpp.s
+CMakeFiles/watertool.dir/hydromodel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/watertool.dir/hydromodel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.cpp -o CMakeFiles/watertool.dir/hydromodel.cpp.s
 
 CMakeFiles/watertool.dir/window.cpp.o: CMakeFiles/watertool.dir/flags.make
 CMakeFiles/watertool.dir/window.cpp.o: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/window.cpp
@@ -173,7 +173,7 @@ watertool_OBJECTS = \
 "CMakeFiles/watertool.dir/main.cpp.o" \
 "CMakeFiles/watertool.dir/waterbody.cpp.o" \
 "CMakeFiles/watertool.dir/hydroset.cpp.o" \
-"CMakeFiles/watertool.dir/model.cpp.o" \
+"CMakeFiles/watertool.dir/hydromodel.cpp.o" \
 "CMakeFiles/watertool.dir/window.cpp.o" \
 "CMakeFiles/watertool.dir/stats.cpp.o"
 
@@ -184,7 +184,7 @@ watertool: CMakeFiles/watertool.dir/watertool_autogen/mocs_compilation.cpp.o
 watertool: CMakeFiles/watertool.dir/main.cpp.o
 watertool: CMakeFiles/watertool.dir/waterbody.cpp.o
 watertool: CMakeFiles/watertool.dir/hydroset.cpp.o
-watertool: CMakeFiles/watertool.dir/model.cpp.o
+watertool: CMakeFiles/watertool.dir/hydromodel.cpp.o
 watertool: CMakeFiles/watertool.dir/window.cpp.o
 watertool: CMakeFiles/watertool.dir/stats.cpp.o
 watertool: CMakeFiles/watertool.dir/build.make

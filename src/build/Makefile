@@ -142,6 +142,30 @@ watertool_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool_autogen.dir/build.make CMakeFiles/watertool_autogen.dir/build
 .PHONY : watertool_autogen/fast
 
+hydromodel.o: hydromodel.cpp.o
+.PHONY : hydromodel.o
+
+# target to build an object file
+hydromodel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/hydromodel.cpp.o
+.PHONY : hydromodel.cpp.o
+
+hydromodel.i: hydromodel.cpp.i
+.PHONY : hydromodel.i
+
+# target to preprocess a source file
+hydromodel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/hydromodel.cpp.i
+.PHONY : hydromodel.cpp.i
+
+hydromodel.s: hydromodel.cpp.s
+.PHONY : hydromodel.s
+
+# target to generate assembly for a file
+hydromodel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/hydromodel.cpp.s
+.PHONY : hydromodel.cpp.s
+
 hydroset.o: hydroset.cpp.o
 .PHONY : hydroset.o
 
@@ -189,30 +213,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-model.o: model.cpp.o
-.PHONY : model.o
-
-# target to build an object file
-model.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/model.cpp.o
-.PHONY : model.cpp.o
-
-model.i: model.cpp.i
-.PHONY : model.i
-
-# target to preprocess a source file
-model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/model.cpp.i
-.PHONY : model.cpp.i
-
-model.s: model.cpp.s
-.PHONY : model.s
-
-# target to generate assembly for a file
-model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/watertool.dir/build.make CMakeFiles/watertool.dir/model.cpp.s
-.PHONY : model.cpp.s
 
 stats.o: stats.cpp.o
 .PHONY : stats.o
@@ -320,15 +320,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... watertool_autogen"
 	@echo "... watertool"
+	@echo "... hydromodel.o"
+	@echo "... hydromodel.i"
+	@echo "... hydromodel.s"
 	@echo "... hydroset.o"
 	@echo "... hydroset.i"
 	@echo "... hydroset.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... model.o"
-	@echo "... model.i"
-	@echo "... model.s"
 	@echo "... stats.o"
 	@echo "... stats.i"
 	@echo "... stats.s"

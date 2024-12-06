@@ -34,6 +34,15 @@ Waterbody::Waterbody(const string& tm, double lat, double lon, double dep, doubl
     error << "Invalid magnitude: " << magnitude;
     throw out_of_range(error.str());
   }
+
+  name = "";
+  type = "";
+  coords = "";
+  time = "";
+
+  pollutant = "";
+  result = 0.0;
+  unit = "";
 }
 
 
