@@ -12,7 +12,7 @@ using namespace std;
 
 Waterbody::Waterbody(const std::string& location, const std::string& tm, const std::string& pollutant, const std::string& pollutantInfo, int pollutantNotation, char resQualifier, double res, const std::string& unit, const std::string& matType, bool compliant):
   //time(tm), latitude(lat), longitude(lon), depth(dep), magnitude(mag)
-  samplingPoint(location), time(tm), determinand(pollutant), determinandDefinition(pollutantInfo), determinandNotation(pollutantNotation), resultQualifier(resQualifier), result(res), determinandUnit(unit), sampledMaterialType(matType), sampleCompliant(compliant);
+  samplingPoint(location), time(tm), determinand(pollutant), determinandDefinition(pollutantInfo), determinandNotation(pollutantNotation), resultQualifier(resQualifier), result(res), determinandUnit(unit), sampledMaterialType(matType), sampleCompliant(compliant)
 {
   ostringstream error;
   error << "Error Found";
