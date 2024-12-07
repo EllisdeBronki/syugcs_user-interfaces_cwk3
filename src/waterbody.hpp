@@ -10,26 +10,41 @@ static const double MAX_LONGITUDE = 180.0;
 
 /* -------------------------------------- **
  * Watertool : Waterbody (Header)         *
- * Editor(s) : Alexander Del Brocco       *
+ * Editor(s) : Alexander Del Brocco, Tom O*
  * Module    : COMP2711 - User Interfaces *
 ** -------------------------------------- */
 
 class Waterbody
 {
   public:
-    Waterbody(const std::string&, double, double, double, double);
-    std::string getTime() const { return time; }
-    double getLatitude() const { return latitude; }
-    double getLongitude() const { return longitude; }
-    double getDepth() const { return depth; }
-    double getMagnitude() const { return magnitude; }
+    Waterbody(const std::string&, const std::string&, const std::string&, const std::string&, int, char, double, const std::string&, const std::string&, bool);
+    string getSamplingPoint() const { return samplingPoint; }
+    string getTime() const { return time; }
+    string getDeterminand() const { return determinand; }
+    string getDeterminandDefinition() const { return determinandDefinition; }
+
+    int getDeterminandNotation() const { return determinandNotation; }
+
+    char getResultQualifier() const { return resultQualifier; }
+    double getResult() const { return result; }
+    std::string getDeterminandUnit() const { return determinandUnit; }
+    std::string getSampledMaterialType() const { return sampledMaterialType; }
+    bool getSampleCompliant() const { return sampleCompliant; }
 
   private:
+    std::string samplingPoint;
     std::string time;
-    double latitude;
-    double longitude;
-    double depth;
-    double magnitude;
+    std::string determinand;
+    std::string determinandDefinition;
+
+    int determinandNotation;
+    char resultQualifier;
+    double result;
+
+    std::string determinandUnit;
+    std::string sampledMaterialType;
+    bool sampleCompliant;
+
 };
 
 std::ostream& operator << (std::ostream&, const Waterbody&);

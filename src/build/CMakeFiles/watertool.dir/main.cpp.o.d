@@ -929,7 +929,7 @@ CMakeFiles/watertool.dir/main.cpp.o: \
  /usr/include/qt6/QtWidgets/qwizard.h \
  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/window.hpp \
  /usr/include/qt6/QtWidgets/QMainWindow \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/model.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel.hpp \
  /usr/include/qt6/QtCore/QAbstractTableModel \
  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydroset.hpp \
  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/waterbody.hpp \
