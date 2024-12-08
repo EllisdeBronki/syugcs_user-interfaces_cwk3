@@ -149,7 +149,7 @@ void WaterbodyWindow::openCSV()
   auto filename = QString("%1_%2.csv")
     .arg(significance->currentText()).arg(period->currentText());
 
-  auto path = dataLocation + "/" + filename;
+  auto path = dataLocation + "/" + "Y-2024";
 
   try {
     model.updateFromFile(path);
