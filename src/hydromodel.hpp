@@ -20,9 +20,7 @@ class Hydromodel: public QAbstractTableModel
     int columnCount(const QModelIndex& index) const { return 5; }
     QVariant data(const QModelIndex&, int) const;
     QVariant headerData(int, Qt::Orientation, int) const;
-
-    double highest() const { return hydroset.highest(); }
-    double lowest() const { return hydroset.lowest(); }
+    
     double meanResult() const { return hydroset.meanResult(); }
 
   private:
