@@ -5,7 +5,7 @@
 #include "csv.hpp"
 
 static const std::string SAMPLE_TIME      = "sample.sampleDateTime";
-static const std::string SAMPLING_POINT   = "sample.samplingPointLabel";
+static const std::string SAMPLING_POINT   = "sample.samplingPoint.label";
 static const std::string SAMPLED_MATERIAL = "sample.sampledMaterialType.label";
 
 static const std::string DETERMINAND           = "determinand.label";
