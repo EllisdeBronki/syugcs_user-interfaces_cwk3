@@ -18,10 +18,10 @@ class Waterbody
 {
   public:
     Waterbody(const std::string&, const std::string&, const std::string&, const std::string&, int, char, double, const std::string&, const std::string&, bool);
-    string getSamplingPoint() const { return samplingPoint; }
-    string getTime() const { return time; }
-    string getDeterminand() const { return determinand; }
-    string getDeterminandDefinition() const { return determinandDefinition; }
+    std::string getSamplingPoint() const { return samplingPoint; }
+    std::string getTime() const { return time; }
+    std::string getDeterminand() const { return determinand; }
+    std::string getDeterminandDefinition() const { return determinandDefinition; }
 
     int getDeterminandNotation() const { return determinandNotation; }
 
