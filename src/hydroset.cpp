@@ -14,7 +14,7 @@ static const std::string DETERMINAND_NOTATION  = "determinand.notation";
 static const std::string RESULT_QUANTIFIER     = "resultQualifier.notation";
 static const std::string RESULT                = "result";
 static const std::string DETERMINAND_UNIT      = "determinand.unit.label";
-static const std::string SAMPLE_COMPLIANT      = "sample.isCompliantSample";
+static const std::string SAMPLE_COMPLIANT      = "sample.isComplianceSample";
 
 using namespace std;
 
@@ -36,7 +36,7 @@ void Hydroset::loadData(const string& filename)
       row[SAMPLE_TIME].get<>(),             // Time of Sample
       row[DETERMINAND].get<>(),             // Pollutant Name
       row[DETERMINAND_DEFINTION].get<>(),   // Pollutant Information
-      row[DETERMINAND_NOTATION].get<int>(), // Pollutant Notation
+      row[DETERMINAND_NOTATION].get<>(),    // Pollutant Notation
       row[RESULT_QUANTIFIER].get<char>(),   // Qunatifier? (>)
       row[RESULT].get<double>(),            // Pollutant Level
       row[DETERMINAND_UNIT].get<>(),        // Units of Pollutant Level

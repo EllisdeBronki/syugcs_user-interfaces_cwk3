@@ -29,7 +29,7 @@ QVariant Hydromodel::data(const QModelIndex& index, int role) const
       case 1: return QVariant(q.getTime().c_str());
       case 2: return QVariant(q.getDeterminand().c_str());
       case 3: return QVariant(q.getDeterminandDefinition().c_str());
-      case 4: return QVariant(q.getDeterminandNotation());
+      case 4: return QVariant(q.getDeterminandNotation().c_str());
       case 5: return QVariant(q.getResultQualifier());
       case 6: return QVariant(q.getResult());
       case 7: return QVariant(q.getDeterminandUnit().c_str());
