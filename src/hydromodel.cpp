@@ -24,12 +24,17 @@ QVariant Hydromodel::data(const QModelIndex& index, int role) const
   }
   else if (role == Qt::DisplayRole) {
     Waterbody q = hydroset[index.row()];
-    switch (index.column()) {
-      case 0: return QVariant(q.getTime().c_str());
-      case 1: return QVariant(q.getLatitude());
-      case 2: return QVariant(q.getLongitude());
-      case 3: return QVariant(q.getDepth());
-      case 4: return QVariant(q.getMagnitude());
+    switch (index.column()) { // Loads Columns of Waterbody
+      case 0: return QVariant(q.getSamplingPoint().c_str());
+      case 1: return QVariant(q.getTime().c_str());
+      case 2: return QVariant(q.getDeterminand().c_str());
+      case 3: return QVariant(q.getDeterminandDefinition().c_str());
+      case 4: return QVariant(q.getDeterminandNotation());
+      case 5: return QVariant(q.getResultQualifier().c_str());
+      case 6: return QVariant(q.getResult());
+      case 7: return QVariant(q.getDeterminandUnit().c_str());
+      case 7: return QVariant(q.getSampledMaterialType().c_str());
+      case 8: return QVariant(q.getSampleCompliant());
     }
   }
 
