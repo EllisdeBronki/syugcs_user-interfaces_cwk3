@@ -37,7 +37,7 @@ void Hydroset::loadData(const string& filename)
       row[DETERMINAND].get<>(),             // Pollutant Name
       row[DETERMINAND_DEFINTION].get<>(),   // Pollutant Information
       row[DETERMINAND_NOTATION].get<>(),    // Pollutant Notation
-      row[RESULT_QUANTIFIER].get<char>(),   // Qunatifier? (>)
+      row[RESULT_QUANTIFIER].get<>(),   // Qunatifier? (>)
       row[RESULT].get<>(),            // Pollutant Level
       row[DETERMINAND_UNIT].get<>(),        // Units of Pollutant Level
       row[SAMPLED_MATERIAL].get<>(),        // Type of Waterbody
