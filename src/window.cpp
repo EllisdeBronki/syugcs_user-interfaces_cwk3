@@ -163,7 +163,7 @@ void WaterbodyWindow::openCSV()
   table->resizeColumnsToContents();
 
   if (statsDialog != nullptr && statsDialog->isVisible()) {
-    statsDialog->update(model.meanDepth(), model.meanMagnitude());
+    statsDialog->update(model.meanResult(), model.meanResult());
   }
 }
 
@@ -175,7 +175,7 @@ void WaterbodyWindow::displayStats()
       statsDialog = new StatsDialog(this);
     }
 
-    statsDialog->update(model.meanDepth(), model.meanMagnitude());
+    statsDialog->update(model.meanResult(), model.meanResult());
 
     statsDialog->show();
     statsDialog->raise();
