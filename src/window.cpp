@@ -4,7 +4,7 @@
 #include "window.hpp"
 #include "stats.hpp"
 
-static const int MIN_WIDTH = 620;
+static const int MIN_WIDTH = 1000;
 
 /* -------------------------------------- **
  * Watertool : Water Window               *
