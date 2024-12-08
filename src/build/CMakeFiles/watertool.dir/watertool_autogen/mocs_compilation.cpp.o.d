@@ -1,8 +1,8 @@
 CMakeFiles/watertool.dir/watertool_autogen/mocs_compilation.cpp.o: \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/mocs_compilation.cpp \
+ /uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/watertool_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/EWIEGA46WW/moc_window.cpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../window.hpp \
+ /uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/watertool_autogen/EWIEGA46WW/moc_window.cpp \
+ /uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../window.hpp \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtWidgets/qmainwindow.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -298,11 +298,11 @@ CMakeFiles/watertool.dir/watertool_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
  /usr/include/qt6/QtWidgets/qtabwidget.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../hydromodel.hpp \
+ /uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../hydromodel.hpp \
  /usr/include/qt6/QtCore/QAbstractTableModel \
  /usr/include/qt6/QtCore/qabstractitemmodel.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../hydroset.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../waterbody.hpp \
+ /uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../hydroset.hpp \
+ /uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/watertool_autogen/EWIEGA46WW/../../../waterbody.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/basic_ios.h \
  /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \

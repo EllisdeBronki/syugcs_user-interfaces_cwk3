@@ -1,4 +1,4 @@
-/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles/watertool.dir
-/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles/edit_cache.dir
-/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles/rebuild_cache.dir
-/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/CMakeFiles/watertool_autogen.dir
+/uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/CMakeFiles/watertool.dir
+/uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/CMakeFiles/edit_cache.dir
+/uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/CMakeFiles/rebuild_cache.dir
+/uolstore/home/student_lnxhome01/sc23to2/Documents/CW3/syugcs_user-interfaces_cwk3/src/build/CMakeFiles/watertool_autogen.dir
