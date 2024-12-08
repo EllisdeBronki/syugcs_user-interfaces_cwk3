@@ -38,7 +38,7 @@ void Hydroset::loadData(const string& filename)
       row[DETERMINAND_DEFINTION].get<>(),   // Pollutant Information
       row[DETERMINAND_NOTATION].get<>(),    // Pollutant Notation
       row[RESULT_QUANTIFIER].get<char>(),   // Qunatifier? (>)
-      row[RESULT].get<double>(),            // Pollutant Level
+      row[RESULT].get<>(),            // Pollutant Level
       row[DETERMINAND_UNIT].get<>(),        // Units of Pollutant Level
       row[SAMPLED_MATERIAL].get<>(),        // Type of Waterbody
       row[SAMPLE_COMPLIANT].get<bool>(),    // Compliance
@@ -52,7 +52,7 @@ Waterbody Hydroset::highest() const
   checkDataExists();
 
   auto waterbody = max_element(data.begin(), data.end(),
-    [](Waterbody a, Waterbody b) { return a.getResult() < b.getResult(); });
+    [](Waterbody a, Waterbody b) { return 0 < 1; });
 
   return *waterbody;
 }
@@ -62,7 +62,7 @@ Waterbody Hydroset::lowest() const
   checkDataExists();
 
   auto waterbody = min_element(data.begin(), data.end(),
-    [](Waterbody a, Waterbody b) { return a.getResult() < b.getResult(); });
+    [](Waterbody a, Waterbody b) { return 0 < 1; });
 
   return *waterbody;
 }
@@ -72,7 +72,7 @@ double Hydroset::meanResult() const
   checkDataExists();
 
   auto sum = accumulate(data.begin(), data.end(), 0.0,
-    [](double total, Waterbody q) { return total + q.getResult(); });
+    [](double total, Waterbody q) { return total + 1; });
 
   return sum / data.size();
 }

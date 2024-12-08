@@ -17,7 +17,7 @@ static const double MAX_LONGITUDE = 180.0;
 class Waterbody
 {
   public:
-    Waterbody(const std::string&, const std::string&, const std::string&, const std::string&, const std::string&, char, double, const std::string&, const std::string&, bool);
+    Waterbody(const std::string&, const std::string&, const std::string&, const std::string&, const std::string&, char, const std::string&, const std::string&, const std::string&, bool);
     std::string getSamplingPoint() const { return samplingPoint; }
     std::string getTime() const { return time; }
     std::string getDeterminand() const { return determinand; }
@@ -26,7 +26,7 @@ class Waterbody
     std::string getDeterminandNotation() const { return determinandNotation; }
 
     char getResultQualifier() const { return resultQualifier; }
-    double getResult() const { return result; }
+    std::string getResult() const { return result; }
     std::string getDeterminandUnit() const { return determinandUnit; }
     std::string getSampledMaterialType() const { return sampledMaterialType; }
     bool getSampleCompliant() const { return sampleCompliant; }
@@ -39,7 +39,7 @@ class Waterbody
 
     std::string determinandNotation;
     char resultQualifier;
-    double result;
+    std::string result;
 
     std::string determinandUnit;
     std::string sampledMaterialType;
