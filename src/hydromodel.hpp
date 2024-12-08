@@ -21,8 +21,9 @@ class Hydromodel: public QAbstractTableModel
     QVariant data(const QModelIndex&, int) const;
     QVariant headerData(int, Qt::Orientation, int) const;
 
-    double meanDepth() const { return hydroset.meanDepth(); }
-    double meanMagnitude() const { return hydroset.meanMagnitude(); }
+    double highest() const { return hydroset.highest(); }
+    double lowest() const { return hydroset.lowest(); }
+    double meanResult() const { return hydroset.meanResult(); }
 
   private:
     Hydroset hydroset;
