@@ -41,7 +41,7 @@ void Hydroset::loadData(const string& filename)
       row[RESULT].get<>(),            // Pollutant Level
       row[DETERMINAND_UNIT].get<>(),        // Units of Pollutant Level
       row[SAMPLED_MATERIAL].get<>(),        // Type of Waterbody
-      row[SAMPLE_COMPLIANT].get<bool>(),    // Compliance
+      row[SAMPLE_COMPLIANT].get<>(),    // Compliance
     };
     data.push_back(waterbody);
   }

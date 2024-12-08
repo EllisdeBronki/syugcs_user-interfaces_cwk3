@@ -34,7 +34,7 @@ QVariant Hydromodel::data(const QModelIndex& index, int role) const
       case 6: return QVariant(q.getResult().c_str());
       case 7: return QVariant(q.getDeterminandUnit().c_str());
       case 8: return QVariant(q.getSampledMaterialType().c_str());
-      case 9: return QVariant(q.getSampleCompliant());
+      case 9: return QVariant(q.getSampleCompliant().c_str());
     }
   }
 
