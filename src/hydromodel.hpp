@@ -17,7 +17,7 @@ class Hydromodel: public QAbstractTableModel
     bool hasData() const { return hydroset.size() > 0; }
 
     int rowCount(const QModelIndex& index) const { return hydroset.size(); }
-    int columnCount(const QModelIndex& index) const { return 5; }
+    int columnCount(const QModelIndex& index) const { return 10; }
     QVariant data(const QModelIndex&, int) const;
     QVariant headerData(int, Qt::Orientation, int) const;
     
