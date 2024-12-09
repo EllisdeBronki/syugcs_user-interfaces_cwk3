@@ -21,7 +21,6 @@ WaterbodyWindow::WaterbodyWindow(): QMainWindow(), statsDialog(nullptr)
   createStatusBar();
   addFileMenu();
   addHelpMenu();
-
   setMinimumWidth(MIN_WIDTH);
   setWindowTitle("Waterbody Tool");
 }

@@ -51,4 +51,5 @@ class PollutantWindow: public QMainWindow
     void setDataLocation();
     void openCSV();
     void about();
+    void filter();
 };
