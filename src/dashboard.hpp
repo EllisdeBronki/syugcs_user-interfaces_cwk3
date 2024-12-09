@@ -23,5 +23,5 @@ class Dashboard: public QMainWindow
 
   private:
     int* deduceWindowSize();
-    void createMainWidget();
+    void createMainWidget(int*);
 };
