@@ -20,7 +20,7 @@ Dashboard::Dashboard(): QMainWindow(), statsDialog(nullptr)
 
 void Dashboard::createMainWidget()
 {
-  QWidget widget = new QWidget();
+  QWidget* widget = new QWidget();
 
   QFont dashboardFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
   widget->setFont(dashboardFont);
