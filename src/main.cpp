@@ -1,5 +1,6 @@
 #include <QtWidgets>
 #include "window.hpp"
+#include "dashboard.hpp"
 
 /* -------------------------------------- **
  * Watertool : Main                       *
@@ -18,6 +19,8 @@ int main(int argc, char* argv[])
   QApplication app(argc, argv);
 
   WaterbodyWindow window;
+  Dashboard dashboard;
+  dashboard.show();
   window.show();
 
   return app.exec();
