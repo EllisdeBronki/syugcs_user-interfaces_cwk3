@@ -14,6 +14,7 @@ qt_add_executable(watertool
     hydroset.cpp
     hydromodel.cpp
     window.cpp
+    dashboard.cpp
     stats.cpp
 )
 

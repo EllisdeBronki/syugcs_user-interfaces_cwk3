@@ -11,7 +11,7 @@ static const int MIN_WIDTH = 1200;
  * Module    : COMP2711 - User Interfaces                                    *
 ** ------------------------------------------------------------------------- */
 
-Dashboard::Dashboard(): QMainWindow(), statsDialog(nullptr)
+Dashboard::Dashboard(): QMainWindow()
 {
   createMainWidget();
   setMinimumWidth(MIN_WIDTH);

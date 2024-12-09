@@ -18,8 +18,6 @@ class StatsDialog;
 
 class Dashboard: public QMainWindow
 {
-  Q_OBJECT
-
   public:
     Dashboard();
 
