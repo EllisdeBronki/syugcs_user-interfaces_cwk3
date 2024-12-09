@@ -1,8 +1,7 @@
 #include <QtWidgets>
 #include <stdexcept>
 #include <iostream>
-#include "window.hpp"
-#include "stats.hpp"
+#include "pollutant.hpp"
 
 static const int MIN_WIDTH = 1200;
 
@@ -12,7 +11,7 @@ static const int MIN_WIDTH = 1200;
  * Module    : COMP2711 - User Interfaces *
 ** -------------------------------------- */
 
-WaterbodyWindow::WaterbodyWindow(): QMainWindow(), statsDialog(nullptr)
+PollutantWindow::PollutantWindow(): QMainWindow()
 {
   createMainWidget();
   createFileSelectors();
@@ -23,11 +22,11 @@ WaterbodyWindow::WaterbodyWindow(): QMainWindow(), statsDialog(nullptr)
   addHelpMenu();
 
   setMinimumWidth(MIN_WIDTH);
-  setWindowTitle("Waterbody Tool");
+  setWindowTitle("Pollutant Tool");
 }
 
 
-void WaterbodyWindow::createMainWidget()
+void PollutantWindow::createMainWidget()
 {
   table = new QTableView();
   table->setModel(&model);
@@ -39,7 +38,7 @@ void WaterbodyWindow::createMainWidget()
 }
 
 
-void WaterbodyWindow::createFileSelectors()
+void PollutantWindow::createFileSelectors()
 {
   QStringList significanceOptions;
   significanceOptions << "significant" << "4.5" << "2.5" << "1.0" << "all";
@@ -53,17 +52,17 @@ void WaterbodyWindow::createFileSelectors()
 }
 
 
-void WaterbodyWindow::createButtons()
+void PollutantWindow::createButtons()
 {
   loadButton = new QPushButton("Load");
-  statsButton = new QPushButton("Stats");
+  filterButton = new QPushButton("Filter");
 
   connect(loadButton, SIGNAL(clicked()), this, SLOT(openCSV()));
-  connect(statsButton, SIGNAL(clicked()), this, SLOT(displayStats()));
+  connect(filterButton, SIGNAL(clicked()), this, SLOT(filter()));
 }
 
 
-void WaterbodyWindow::createToolBar()
+void PollutantWindow::createToolBar()
 {
   QToolBar* toolBar = new QToolBar();
 
@@ -80,13 +79,37 @@ void WaterbodyWindow::createToolBar()
   toolBar->addSeparator();
 
   toolBar->addWidget(loadButton);
-  toolBar->addWidget(statsButton);
+  toolBar->addWidget(filterButton);
 
   addToolBar(Qt::LeftToolBarArea, toolBar);
 }
 
+void PollutantWindow::filter()
+{
+      if (dataLocation == "") {
+    QMessageBox::critical(this, "Data Location Error",
+      "Data location has not been set!\n\n"
+      "You can specify this via the File menu."
+    );
+    return;
+  }
 
-void WaterbodyWindow::createStatusBar()
+  auto filename = QString("%1_%2.csv")
+    .arg(significance->currentText()).arg(period->currentText());
+
+  auto path = dataLocation + "/" + "Y-2024.csv";
+
+  try {
+    model.updateFromFile(path);
+  }
+  catch (const std::exception& error) {
+    QMessageBox::critical(this, "CSV File Error", error.what());
+    return;
+  }
+  
+}
+
+void PollutantWindow::createStatusBar()
 {
   fileInfo = new QLabel("Current file: <none>");
   QStatusBar* status = statusBar();
@@ -94,7 +117,7 @@ void WaterbodyWindow::createStatusBar()
 }
 
 
-void WaterbodyWindow::addFileMenu()
+void PollutantWindow::addFileMenu()
 {
   QAction* locAction = new QAction("Set Data &Location", this);
   locAction->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_L));
@@ -110,7 +133,7 @@ void WaterbodyWindow::addFileMenu()
 }
 
 
-void WaterbodyWindow::addHelpMenu()
+void PollutantWindow::addHelpMenu()
 {
   QAction* aboutAction = new QAction("&About", this);
   connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
@@ -124,7 +147,7 @@ void WaterbodyWindow::addHelpMenu()
 }
 
 
-void WaterbodyWindow::setDataLocation()
+void PollutantWindow::setDataLocation()
 {
   QString directory = QFileDialog::getExistingDirectory(
     this, "Data Location", ".",
@@ -136,7 +159,7 @@ void WaterbodyWindow::setDataLocation()
 }
 
 
-void WaterbodyWindow::openCSV()
+void PollutantWindow::openCSV()
 {
   if (dataLocation == "") {
     QMessageBox::critical(this, "Data Location Error",
@@ -162,29 +185,11 @@ void WaterbodyWindow::openCSV()
   fileInfo->setText(QString("Current file: <kbd>%1</kbd>").arg(filename));
   table->resizeColumnsToContents();
 
-  if (statsDialog != nullptr && statsDialog->isVisible()) {
-    statsDialog->update(model.meanResult(), model.meanResult());
-  }
 }
 
 
-void WaterbodyWindow::displayStats()
-{
-  if (model.hasData()) {
-    if (statsDialog == nullptr) {
-      statsDialog = new StatsDialog(this);
-    }
 
-    statsDialog->update(model.meanResult(), model.meanResult());
-
-    statsDialog->show();
-    statsDialog->raise();
-    statsDialog->activateWindow();
-  }
-}
-
-
-void WaterbodyWindow::about()
+void PollutantWindow::about()
 {
   QMessageBox::about(this, "About Waterbody Tool",
     "Waterbody Tool displays and analyzes earthquake data loaded from"

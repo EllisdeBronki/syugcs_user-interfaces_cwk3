@@ -14,7 +14,9 @@ qt_add_executable(watertool
     hydroset.cpp
     hydromodel.cpp
     window.cpp
+    dashboard.cpp
     stats.cpp
+    pollutant.cpp
 )
 
 target_link_libraries(watertool PRIVATE Qt6::Widgets)
