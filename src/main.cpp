@@ -1,6 +1,7 @@
 #include <QtWidgets>
 #include "window.hpp"
 #include "dashboard.hpp"
+#include "pollutant.hpp"
 
 /* -------------------------------------- **
  * Watertool : Main                       *
@@ -20,8 +21,10 @@ int main(int argc, char* argv[])
 
   WaterbodyWindow window;
   Dashboard dashboard;
+  PollutantWindow pollutant;
   dashboard.show();
   window.show();
+  pollutant.show();
 
   return app.exec();
 }
