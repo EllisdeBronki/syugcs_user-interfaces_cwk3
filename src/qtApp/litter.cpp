@@ -6,7 +6,9 @@
 
 static const int MIN_WIDTH = 1200;
 
-static const QModelIndex& NUL = std::nullptr_t; 
+static const QModelIndex nullIndex;
+
+const QVariant condition = "Endrin";
 
 /* -------------------------------------------------------------------------- **
  * Watertool : Water Window (Header)                                          *
@@ -25,53 +27,14 @@ LitterWindow::LitterWindow(): QMainWindow()
   addHelpMenu();
 
   setMinimumWidth(MIN_WIDTH);
-  setWindowTitle("Pollutant Tool");
+  setWindowTitle("Yum Tool");
 }
 
 
 void LitterWindow::createMainWidget()
 {
-  QChart* chart = new QChart();
-  QBarSet* set0 = new QBarSet("Data");
-  QStringList categories;
-
-  const std::string condition = "";
-
-  for (int row = 0; row < model.rowCount(NUL); ++row) {
-    std::string column2Val = model.data(model.index(row, 2));
-
-    if (column2Val == condition) {
-      double barVal = model.data(model.index(row, 6)).toDouble();
-
-      set0->append(barVal);
-
-      categories.append(model.data(model.index(row, 0)).toString());
-    }
-  }
-
-  if (set0->count() > 0) {
-      QBarSeries *series = new QBarSeries();
-      series->append(set0);
-
-      chart->addSeries(series);
-
-      QBarCategoryAxis *axisX = new QBarCategoryAxis();
-      axisX->append(categories);
-      chart->addAxis(axisX, Qt::AlignBottom);
-      series->attachAxis(axisX);
-
-      QValueAxis *axisY = new QValueAxis();
-      axisY->setRange(0, 100);
-      chart->addAxis(axisY, Qt::AlignLeft);
-      series->attachAxis(axisY);
-
-      QChartView *chartView = new QChartView(chart);
-      chartView->setRenderHint(QPainter::Antialiasing);
-
-      setCentralWidget(chartView);
-  } else {
-      QMessageBox::information(this, "No Data", "No rows match the condition.");
-  }
+  chart = new QChart();
+  set0 = new QBarSet("Data");
 }
 
 
@@ -220,8 +183,42 @@ void LitterWindow::openCSV()
   }
 
   fileInfo->setText(QString("Current file: <kbd>%1</kbd>").arg(filename));
-  table->resizeColumnsToContents();
 
+  for (int row = 0; row < model.rowCount(nullIndex); ++row) {
+    QVariant column2Val = model.data(model.index(row, 2), 0);
+
+    if (column2Val == condition) {
+      double barVal = model.data(model.index(row, 6), 0).toDouble();
+
+      set0->append(barVal);
+
+      categories.append(model.data(model.index(row, 0), 0).toString());
+    }
+  }
+
+  if (set0->count() > 0) {
+      QBarSeries *series = new QBarSeries();
+      series->append(set0);
+
+      chart->addSeries(series);
+
+      QBarCategoryAxis *axisX = new QBarCategoryAxis();
+      axisX->append(categories);
+      chart->addAxis(axisX, Qt::AlignBottom);
+      series->attachAxis(axisX);
+
+      QValueAxis *axisY = new QValueAxis();
+      axisY->setRange(0, 100);
+      chart->addAxis(axisY, Qt::AlignLeft);
+      series->attachAxis(axisY);
+
+      QChartView *chartView = new QChartView(chart);
+      chartView->setRenderHint(QPainter::Antialiasing);
+
+      setCentralWidget(chartView);
+  } else {
+      QMessageBox::information(this, "No Data", "No rows match the condition.");
+  }
 }
 
 void LitterWindow::about()

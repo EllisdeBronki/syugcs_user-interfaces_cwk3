@@ -34,7 +34,6 @@ class PollutantWindow: public QMainWindow
     void createFileSelectors();
     void createButtons();
     void createToolBar();
-    void filter();
     void createStatusBar();
     void addFileMenu();
     void addHelpMenu();
@@ -51,5 +50,6 @@ class PollutantWindow: public QMainWindow
   private slots:
     void setDataLocation();
     void openCSV();
+    void filter();
     void about();
 };
