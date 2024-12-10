@@ -5,7 +5,7 @@
 
 /* ------------------------------------------------------------------------- **
  * Watertool : Hydroset (Header)                                             *
- * Editor(s) : Alexander Del Brocco                                          *
+ * Editor(s) : Alexander Del Brocco, Thomas Onions                           *
  * Module    : COMP2711 - User Interfaces                                    *
 ** ------------------------------------------------------------------------- */
 

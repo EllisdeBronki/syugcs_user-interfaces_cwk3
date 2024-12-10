@@ -18,7 +18,7 @@ static const std::string GHP   = "Geographical Hotspots Page";
 
 /* ------------------------------------------------------------------------- **
  * Watertool : Dashboard                                                     *
- * Author(s) : Alexander Del Brocco                                          *
+ * Author(s) : Alexander Del Brocco, Tom Onions                              *
  * Module    : COMP2711 - User Interfaces                                    *
 ** ------------------------------------------------------------------------- */
 
@@ -47,32 +47,32 @@ void Dashboard::createMainWidget(int* dimensions)
 {
   QWidget* dashboard = new QWidget(this);
 
-  QPushButton* pop   = new QPushButton("Pollutant concentrations at sample points.", dashboard);
+  QPushButton* pop   = new QPushButton("Pollutant concentrations\n at sample points.", dashboard);
   pop->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* popL = new QLabel("Pollutant Overview Page", pop);
   popL->setStyleSheet("padding: 10px; border: 1px solid #ccc;");
 
-  QPushButton* porgp = new QPushButton("Search natural pollutants that remain overtime.", dashboard);
+  QPushButton* porgp = new QPushButton("Search natural pollutants\n that remain overtime.", dashboard);
   porgp->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* porgpL = new QLabel("Persistant Organic Pollutants Page", porgp);
   porgpL->setStyleSheet("padding: 10px; border: 1px solid #ccc;");
 
-  QPushButton* elip  = new QPushButton("View indications of enviromental wastage and litter.", dashboard);
+  QPushButton* elip  = new QPushButton("View indications of enviromental\n wastage and litter.", dashboard);
   elip->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* elipL = new QLabel("Enviromental Litter Indicator Page", elip);
   elipL->setStyleSheet("padding: 10px; border: 1px solid #ccc;");
 
-  QPushButton* fcp   = new QPushButton("View trends of flourine based pollutants, possibly caused by water treatment.", dashboard);
+  QPushButton* fcp   = new QPushButton("View trends of flourine based\n pollutants, possibly caused by\n water treatment.", dashboard);
   fcp->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* fcpL = new QLabel("Flourinated Compounds Page", fcp);
   fcpL->setStyleSheet("padding: 10px; border: 1px solid #ccc;");
 
-  QPushButton* cd    = new QPushButton("View current policy stances and standards on the pollutants detected in sampled locations.", dashboard);
+  QPushButton* cd    = new QPushButton("View current policy stances\n and standards on the pollutants\n detected in sampled locations.", dashboard);
   cd->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* cdL = new QLabel("Compliance Dashboard", cd);
   cdL->setStyleSheet("padding: 10px; border: 1px solid #ccc;");
 
-  QPushButton* ghp   = new QPushButton("See a digital map visualisation on pollutant levels across your country, and abroad", dashboard);
+  QPushButton* ghp   = new QPushButton("See a digital map\n visualisation on pollutant\n levels across your\n country and abroad", dashboard);
   ghp->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* ghpL = new QLabel("Geographical Hotspots Page", ghp);
   ghpL->setStyleSheet("padding: 10px; border: 1px solid #ccc;");

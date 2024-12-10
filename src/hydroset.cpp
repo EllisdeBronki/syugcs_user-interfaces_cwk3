@@ -20,7 +20,7 @@ using namespace std;
 
 /* ------------------------------------------------------------------------- **
  * Watertool : Hydroset ~ Class methods                                      *
- * Editor(s) : Alexander Del Brocco                                          *
+ * Editor(s) : Alexander Del Brocco, Thomas Onions                           *
  * Module    : COMP2711 - User Interfaces                                    *
 ** ------------------------------------------------------------------------- */
 

@@ -3,7 +3,7 @@
 
 /* -------------------------------------- **
  * Watertool : Statistics                 *
- * Editor(s) : Alexander Del Brocco       *
+ * Editor(s) : Alexander Del Brocco, Tom O*
  * Module    : COMP2711 - User Interfaces *
 ** -------------------------------------- */
 

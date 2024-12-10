@@ -12,7 +12,7 @@ class StatsDialog;
 
 /* ------------------------------------------------------------------------- **
  * Watertool : Dashboard (Header)                                            *
- * Author(s) : Alexander Del Brocco                                          *
+ * Author(s) : Alexander Del Brocco, Tom Onions                              *
  * Module    : COMP2711 - User Interfaces                                    *
 ** ------------------------------------------------------------------------- */
 

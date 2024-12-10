@@ -8,7 +8,7 @@ static const int MIN_WIDTH = 1200;
 
 /* -------------------------------------- **
  * Watertool : Water Window               *
- * Editor(s) : Alexander Del Brocco       *
+ * Editor(s) : Alexander Del Brocco, Tom O*
  * Module    : COMP2711 - User Interfaces *
 ** -------------------------------------- */
 
