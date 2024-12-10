@@ -5,6 +5,11 @@
 
 static const int MIN_WIDTH = 1200;
 
+static const QModelIndex nullIndex;
+
+const QVariant determinand = "Mn- Filtered";
+const QVariant samplePoint = "MALHAM TARN";
+
 /* -------------------------------------------------------------------------- **
  * Watertool : Water Window (Header)                                          *
  * Editor(s) : Alexander Del Brocco, Thomas Onions                            *
@@ -28,13 +33,8 @@ PollutantWindow::PollutantWindow(): QMainWindow()
 
 void PollutantWindow::createMainWidget()
 {
-  table = new QTableView();
-  table->setModel(&model);
-
-  QFont tableFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
-  table->setFont(tableFont);
-
-  setCentralWidget(table); 
+  chart = new QChart();
+  set0 = new QBarSet("Data");
 }
 
 
@@ -183,7 +183,44 @@ void PollutantWindow::openCSV()
   }
 
   fileInfo->setText(QString("Current file: <kbd>%1</kbd>").arg(filename));
-  table->resizeColumnsToContents();
+
+  for (int row = 0; row < model.rowCount(nullIndex); ++row) {
+    QVariant column2Val = model.data(model.index(row, 2), 0);
+    QVariant column0Val = model.data(model.index(row, 0), 0);
+
+    // Condition has been changed to sampling point and pollutant
+    if (column2Val == determinand && column0Val == samplePoint) {
+      double barVal = model.data(model.index(row, 6), 0).toDouble();
+
+      set0->append(barVal);
+
+      categories.append(model.data(model.index(row, 1), 0).toString());
+    }
+  }
+
+  if (set0->count() > 0) {
+    QBarSeries *series = new QBarSeries();
+    series->append(set0);
+
+    chart->addSeries(series);
+
+    QBarCategoryAxis *axisX = new QBarCategoryAxis();
+    axisX->append(categories);
+    chart->addAxis(axisX, Qt::AlignBottom);
+    series->attachAxis(axisX);
+
+    QValueAxis *axisY = new QValueAxis();
+    axisY->setRange(0, 20);
+    chart->addAxis(axisY, Qt::AlignLeft);
+    series->attachAxis(axisY);
+
+    QChartView *chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+
+    setCentralWidget(chartView);
+  } else {
+    QMessageBox::information(this, "No Data", "No rows match the condition.");
+  }
 
 }
 

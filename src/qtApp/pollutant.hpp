@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QtCharts>
 #include "../hydromodel/hydromodel.hpp"
 
 class QString;
@@ -44,7 +45,9 @@ class PollutantWindow: public QMainWindow
     QComboBox* period;         // selector for quake feed time period
     QPushButton* loadButton;   // button to load a new CSV file
     QPushButton* filterButton;  // button to display dataset stats
-    QTableView* table;         // table of quake data
+    QChart* chart;
+    QBarSet* set0;
+    QStringList categories;
     QLabel* fileInfo;          // status bar info on current file
 
   private slots:

@@ -197,27 +197,27 @@ void LitterWindow::openCSV()
   }
 
   if (set0->count() > 0) {
-      QBarSeries *series = new QBarSeries();
-      series->append(set0);
+    QBarSeries *series = new QBarSeries();
+    series->append(set0);
 
-      chart->addSeries(series);
+    chart->addSeries(series);
 
-      QBarCategoryAxis *axisX = new QBarCategoryAxis();
-      axisX->append(categories);
-      chart->addAxis(axisX, Qt::AlignBottom);
-      series->attachAxis(axisX);
+    QBarCategoryAxis *axisX = new QBarCategoryAxis();
+    axisX->append(categories);
+    chart->addAxis(axisX, Qt::AlignBottom);
+    series->attachAxis(axisX);
 
-      QValueAxis *axisY = new QValueAxis();
-      axisY->setRange(0, 20);
-      chart->addAxis(axisY, Qt::AlignLeft);
-      series->attachAxis(axisY);
+    QValueAxis *axisY = new QValueAxis();
+    axisY->setRange(0, 20);
+    chart->addAxis(axisY, Qt::AlignLeft);
+    series->attachAxis(axisY);
 
-      QChartView *chartView = new QChartView(chart);
-      chartView->setRenderHint(QPainter::Antialiasing);
+    QChartView *chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
 
-      setCentralWidget(chartView);
+    setCentralWidget(chartView);
   } else {
-      QMessageBox::information(this, "No Data", "No rows match the condition.");
+    QMessageBox::information(this, "No Data", "No rows match the condition.");
   }
 }
 
