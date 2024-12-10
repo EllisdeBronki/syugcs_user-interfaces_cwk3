@@ -25,13 +25,13 @@ int main(int argc, char* argv[])
   DataPage dataPage;
   Dashboard dashboard;
   PollutantOverview pollutantOverview;
-  PersistantPollutants persistnantPollutants;
+  PersistantPollutants persistantPollutants;
 
   // Show Pages (temporary for testing)
   dashboard.show();
   dataPage.show();
   pollutantOverview.show();
-  peristantPollutants.show();
+  persistantPollutants.show();
 
   return app.exec();
 }
