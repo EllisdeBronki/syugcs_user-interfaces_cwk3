@@ -2,6 +2,7 @@
 #include "qtApp/window.hpp"
 #include "qtApp/dashboard.hpp"
 #include "qtApp/pollutant.hpp"
+#include "qtApp/litter.hpp"
 
 /* -------------------------------------- **
  * Watertool : Main                       *
@@ -22,9 +23,11 @@ int main(int argc, char* argv[])
   WaterbodyWindow window;
   Dashboard dashboard;
   PollutantWindow pollutant;
+  LitterWindow litter;
   dashboard.show();
   window.show();
   pollutant.show();
+  litter.show();
 
   return app.exec();
 }
