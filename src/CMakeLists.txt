@@ -17,6 +17,7 @@ qt_add_executable(watertool
     qtApp/dashboard.cpp
     qtApp/stats.cpp
     qtApp/pollutant.cpp
+    qtApp/elip.cpp
 )
 
 target_link_libraries(watertool PRIVATE Qt6::Widgets)
