@@ -8,7 +8,7 @@ static const int MIN_WIDTH = 1200;
 
 static const QModelIndex nullIndex;
 
-const QVariant condition = "Endrin";
+const QVariant condition = "Mn- Filtered";
 
 /* -------------------------------------------------------------------------- **
  * Watertool : Water Window (Header)                                          *
@@ -208,7 +208,7 @@ void LitterWindow::openCSV()
       series->attachAxis(axisX);
 
       QValueAxis *axisY = new QValueAxis();
-      axisY->setRange(0, 100);
+      axisY->setRange(0, 20);
       chart->addAxis(axisY, Qt::AlignLeft);
       series->attachAxis(axisY);
 
