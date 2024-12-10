@@ -26,7 +26,6 @@ WaterbodyWindow::WaterbodyWindow(): QMainWindow(), statsDialog(nullptr)
   setWindowTitle("Waterbody Tool");
 }
 
-
 void WaterbodyWindow::createMainWidget()
 {
   table = new QTableView();
@@ -37,7 +36,6 @@ void WaterbodyWindow::createMainWidget()
 
   setCentralWidget(table); 
 }
-
 
 void WaterbodyWindow::createFileSelectors()
 {
@@ -52,7 +50,6 @@ void WaterbodyWindow::createFileSelectors()
   period->addItems(periodOptions);
 }
 
-
 void WaterbodyWindow::createButtons()
 {
   loadButton = new QPushButton("Load");
@@ -61,7 +58,6 @@ void WaterbodyWindow::createButtons()
   connect(loadButton, SIGNAL(clicked()), this, SLOT(openCSV()));
   connect(statsButton, SIGNAL(clicked()), this, SLOT(displayStats()));
 }
-
 
 void WaterbodyWindow::createToolBar()
 {
@@ -93,7 +89,6 @@ void WaterbodyWindow::createStatusBar()
   status->addWidget(fileInfo);
 }
 
-
 void WaterbodyWindow::addFileMenu()
 {
   QAction* locAction = new QAction("Set Data &Location", this);
@@ -109,7 +104,6 @@ void WaterbodyWindow::addFileMenu()
   fileMenu->addAction(closeAction);
 }
 
-
 void WaterbodyWindow::addHelpMenu()
 {
   QAction* aboutAction = new QAction("&About", this);
@@ -123,7 +117,6 @@ void WaterbodyWindow::addHelpMenu()
   helpMenu->addAction(aboutQtAction);
 }
 
-
 void WaterbodyWindow::setDataLocation()
 {
   QString directory = QFileDialog::getExistingDirectory(
@@ -134,7 +127,6 @@ void WaterbodyWindow::setDataLocation()
     dataLocation = directory;
   }
 }
-
 
 void WaterbodyWindow::openCSV()
 {
@@ -167,7 +159,6 @@ void WaterbodyWindow::openCSV()
   }
 }
 
-
 void WaterbodyWindow::displayStats()
 {
   if (model.hasData()) {
@@ -182,7 +173,6 @@ void WaterbodyWindow::displayStats()
     statsDialog->activateWindow();
   }
 }
-
 
 void WaterbodyWindow::about()
 {
