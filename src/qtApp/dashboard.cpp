@@ -10,6 +10,7 @@
 
 static const int MIN_WIDTH  = 1000;
 static const int MIN_HEIGHT = 1000;
+static const QString TITLE = "Water Quality Monitor - Dashboard";
 
 static QString POP   = "Pollutants Overview Page";
 static QString PORGP = "Persistant Organic Pollutants Page";
@@ -39,7 +40,7 @@ Dashboard::Dashboard(): QMainWindow()
   createMainWidget(screenSize);
   setMinimumWidth(screenSize[0] * .5);
   setMinimumHeight(screenSize[1] * .5);
-  setWindowTitle("Water Quality Monitor - Dashboard");
+  setWindowTitle(TITLE);
 }
 
 int* Dashboard::deduceWindowSize() 
