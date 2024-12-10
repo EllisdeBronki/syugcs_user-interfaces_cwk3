@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <stdexcept>
 #include <iostream>
+
 #include "dashboard.hpp"
 
 static const int MIN_WIDTH  = 1000;
