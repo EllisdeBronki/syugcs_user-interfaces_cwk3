@@ -1,7 +1,7 @@
 #include <QtWidgets>
-#include "window.hpp"
-#include "dashboard.hpp"
-#include "pollutant.hpp"
+#include "qtApp/window.hpp"
+#include "qtApp/dashboard.hpp"
+#include "qtApp/pollutant.hpp"
 
 /* -------------------------------------- **
  * Watertool : Main                       *

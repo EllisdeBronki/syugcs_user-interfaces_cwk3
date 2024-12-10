@@ -10,13 +10,13 @@ qt_standard_project_setup()
 
 qt_add_executable(watertool
     main.cpp
-    waterbody.cpp
-    hydroset.cpp
-    hydromodel.cpp
-    window.cpp
-    dashboard.cpp
-    stats.cpp
-    pollutant.cpp
+    hydromodel/waterbody.cpp
+    hydromodel/hydroset.cpp
+    hydromodel/hydromodel.cpp
+    qtApp/window.cpp
+    qtApp/dashboard.cpp
+    qtApp/stats.cpp
+    qtApp/pollutant.cpp
 )
 
 target_link_libraries(watertool PRIVATE Qt6::Widgets)
