@@ -77,31 +77,6 @@ void EnviromentalLitter::createToolBar()
   addToolBar(Qt::LeftToolBarArea, toolBar);
 }
 
-void EnviromentalLitter::filter()
-{
-      if (dataLocation == "") {
-    QMessageBox::critical(this, "Data Location Error",
-      "Data location has not been set!\n\n"
-      "You can specify this via the File menu."
-    );
-    return;
-  }
-
-  auto filename = QString("%1_%2.csv")
-    .arg(significance->currentText()).arg(period->currentText());
-
-  auto path = dataLocation + "/" + "Y-2024.csv";
-
-  try {
-    model.updateFromFile(path);
-  }
-  catch (const std::exception& error) {
-    QMessageBox::critical(this, "CSV File Error", error.what());
-    return;
-  }
-  
-}
-
 void EnviromentalLitter::createStatusBar()
 {
   fileInfo = new QLabel("Current file: <none>");
@@ -162,8 +137,7 @@ void EnviromentalLitter::openCSV()
     return;
   }
 
-  auto filename = QString("%1_%2.csv")
-    .arg(significance->currentText()).arg(period->currentText());
+  auto filename = QString("%1_%2.csv");
 
   auto path = dataLocation + "/" + "Y-2024.csv";
 

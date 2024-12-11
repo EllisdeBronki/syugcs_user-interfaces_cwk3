@@ -127,8 +127,7 @@ void DataPage::openCSV()
     return;
   }
 
-  auto filename = QString("%1_%2.csv")
-    .arg(significance->currentText()).arg(period->currentText());
+  auto filename = QString("%1_%2.csv");
 
   auto path = dataLocation + "/" + "Y-2024.csv";
 
@@ -145,21 +144,6 @@ void DataPage::openCSV()
 
   if (statsDialog != nullptr && statsDialog->isVisible()) {
     statsDialog->update(model.meanResult(), model.meanResult());
-  }
-}
-
-void DataPage::displayStats()
-{
-  if (model.hasData()) {
-    if (statsDialog == nullptr) {
-      statsDialog = new StatsDialog(this);
-    }
-
-    statsDialog->update(model.meanResult(), model.meanResult());
-
-    statsDialog->show();
-    statsDialog->raise();
-    statsDialog->activateWindow();
   }
 }
 

@@ -46,7 +46,6 @@ class PersistentPollutants: public QMainWindow
     QComboBox* significance;   // selector for quake feed significance level
     QComboBox* period;         // selector for quake feed time period
     QPushButton* loadButton;   // button to load a new CSV file
-    QPushButton* filterButton;  // button to display dataset stats
     QChart* chart;
     QBarSet* set0;
     QStringList categories;
@@ -55,6 +54,5 @@ class PersistentPollutants: public QMainWindow
   private slots:
     void setDataLocation();
     void openCSV();
-    void filter();
     void about();
 };
