@@ -3,7 +3,8 @@
 #include "qtApp/datapage.hpp"
 #include "qtApp/dashboard.hpp"
 #include "qtApp/pollutant-overview.hpp"
-#include "qtApp/persistant-pollutants.hpp"
+#include "qtApp/persistent-pollutants.hpp"
+#include "qtApp/enviroment-litter.hpp"
 
 /* ------------------------------------------------------------------------- **
  * Watertool : Main                                                          *
@@ -25,13 +26,15 @@ int main(int argc, char* argv[])
   DataPage dataPage;
   Dashboard dashboard;
   PollutantOverview pollutantOverview;
-  PersistantPollutants persistantPollutants;
+  PersistentPollutants persistantPollutants;
+  EnviromentalLitter enviromentalLitter;
 
   // Show Pages (temporary for testing)
   dashboard.show();
   dataPage.show();
   pollutantOverview.show();
   persistantPollutants.show();
+  enviromentalLitter.show();
 
   return app.exec();
 }

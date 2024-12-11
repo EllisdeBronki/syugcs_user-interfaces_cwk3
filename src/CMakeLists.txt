@@ -17,7 +17,8 @@ qt_add_executable(watertool
     qtApp/datapage.cpp
     qtApp/dashboard.cpp
     qtApp/pollutant-overview.cpp
-    qtApp/persistant-pollutants.cpp
+    qtApp/persistent-pollutants.cpp
+    qtApp/enviroment-litter.cpp
     qtApp/stats.cpp
 )
 
