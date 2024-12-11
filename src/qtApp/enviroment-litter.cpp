@@ -8,8 +8,8 @@ static const int MIN_WIDTH = 1200;
 static const QString TITLE = "Water Quality Monitor - Enviromental Litter";
 
 static const QModelIndex NUL;
-const QVariant SELECT_DETERMINAND  = "As-Filtered";
-const QVariant SELECT_SAMPLE_POINT = "LOW HOUSE FARM RIPON 2851";
+const QVariant SELECT_DETERMINAND  = "Cond @ 25C";
+const QVariant SELECT_SAMPLE_POINT = "SEMER WATER";
 
 static const int         READ         = 0;
 
@@ -156,15 +156,13 @@ void EnviromentalLitter::openCSV()
     QVariant determinand = model.data(model.index(row, DETERMINAND), READ);
     QVariant samplePoint = model.data(model.index(row, SAMPLE_POINT), READ);
 
-    if (determinand == SELECT_DETERMINAND && samplePoint == SELECT_SAMPLE_POINT) {
+    if (determinand == SELECT_DETERMINAND) {
       double barVal = model.data(model.index(row, RESULT), READ).toDouble();
       QString timeString = model.data(model.index(row, TIME), READ).toString();
 
       QDateTime timestamp = QDateTime::fromString(timeString, "yyyy-MM-dd HH:mm:ss");
 
-      if (timestamp.isValid()) {
-        series->append(timestamp.toMSecsSinceEpoch(), barVal);
-      }
+      series->append(timestamp.toMSecsSinceEpoch(), barVal);
     }
   }
 
