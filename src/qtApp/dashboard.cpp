@@ -7,6 +7,12 @@
 #include <iostream>
 
 #include "dashboard.hpp"
+#include "dashboard.hpp"
+#include "datapage.hpp"
+#include "dashboard.hpp"
+#include "pollutant-overview.hpp"
+#include "persistent-pollutants.hpp"
+#include "enviroment-litter.hpp"
 
 static const int MIN_WIDTH  = 1000;
 static const int MIN_HEIGHT = 1000;
@@ -63,31 +69,37 @@ void Dashboard::createMainWidget(int* dimensions)
   pop->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* popL = new QLabel(POP, pop);
   popL->setStyleSheet(QLB_STYLE);
+  connect(pop, &QPushButton::clicked, this, &Dashboard::showPop);
 
   QPushButton* porgp = new QPushButton(PORGP_TXT, dashboard);
   porgp->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* porgpL = new QLabel(PORGP, porgp);
   porgpL->setStyleSheet(QLB_STYLE);
+  connect(porgp, &QPushButton::clicked, this, &Dashboard::showPorgp);
 
   QPushButton* elip  = new QPushButton(ELIP_TXT, dashboard);
   elip->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* elipL = new QLabel(ELIP, elip);
   elipL->setStyleSheet(QLB_STYLE);
+  connect(elip, &QPushButton::clicked, this, &Dashboard::showElip);
 
   QPushButton* fcp   = new QPushButton(FCP_TXT, dashboard);
   fcp->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* fcpL = new QLabel(FCP, fcp);
   fcpL->setStyleSheet(QLB_STYLE);
+  connect(fcp, &QPushButton::clicked, this, &Dashboard::showFcp);
 
   QPushButton* cd    = new QPushButton(CD_TXT, dashboard);
   cd->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* cdL = new QLabel(CD, cd);
   cdL->setStyleSheet(QLB_STYLE);
+  connect(cd, &QPushButton::clicked, this, &Dashboard::showCd);
 
   QPushButton* ghp   = new QPushButton(GHP_TXT, dashboard);
   ghp->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   QLabel* ghpL = new QLabel(GHP, ghp);
   ghpL->setStyleSheet(QLB_STYLE);
+  connect(ghp, &QPushButton::clicked, this, &Dashboard::showGhp);
 
   QGridLayout* grid = new QGridLayout;
 
@@ -110,4 +122,37 @@ void Dashboard::createMainWidget(int* dimensions)
   QFont dashboardFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
   dashboard->setFont(dashboardFont);
   dashboard->setMinimumSize(dimensions[0] * .5, dimensions[1] * .5);
+}
+
+void Dashboard::showPop()
+{
+  popPage = new PollutantOverview();
+  popPage->show();
+}
+
+void Dashboard::showPorgp()
+{
+  porgpPage = new PersistentPollutants();
+  porgpPage->show();
+}
+
+void Dashboard::showElip()
+{
+  elipPage = new EnviromentalLitter();
+  elipPage->show();
+}
+
+void Dashboard::showFcp()
+{
+  return;
+}
+
+void Dashboard::showCd()
+{
+  return;
+}
+
+void Dashboard::showGhp()
+{
+  return;
 }

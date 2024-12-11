@@ -33,6 +33,7 @@ class EnviromentalLitter: public QMainWindow
 
   private:
     void createMainWidget();
+    int* deduceWindowSize();
     void createFileSelectors();
     void createButtons();
     void createToolBar();

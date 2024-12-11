@@ -26,14 +26,15 @@ static const int         RESULT       = 6;
 PollutantOverview::PollutantOverview(): QMainWindow()
 {
   createMainWidget();
-  createFileSelectors();
   createButtons();
   createToolBar();
   createStatusBar();
   addFileMenu();
   addHelpMenu();
 
-  setMinimumWidth(MIN_WIDTH);
+  int* screenSize = deduceWindowSize();
+  setMinimumWidth(screenSize[0] * .5);
+  setMinimumHeight(screenSize[1] * .5);
   setWindowTitle(TITLE);
 }
 
@@ -44,28 +45,23 @@ void PollutantOverview::createMainWidget()
   set0 = new QBarSet("Data");
 }
 
-
-void PollutantOverview::createFileSelectors()
+int* PollutantOverview::deduceWindowSize() 
 {
-  QStringList significanceOptions;
-  significanceOptions << "significant" << "4.5" << "2.5" << "1.0" << "all";
-  significance = new QComboBox();
-  significance->addItems(significanceOptions);
+  QScreen* screen = QGuiApplication::primaryScreen();
+  QRect screenMax = screen->availableGeometry();
 
-  QStringList periodOptions;
-  periodOptions << "hour" << "day" << "week" << "month";
-  period = new QComboBox();
-  period->addItems(periodOptions);
+  int* screenDims = new int[2];
+  screenDims[0] = screenMax.width();
+  screenDims[1] = screenMax.height();
+
+  return screenDims;
 }
-
 
 void PollutantOverview::createButtons()
 {
   loadButton = new QPushButton("Load");
-  filterButton = new QPushButton("Filter");
 
   connect(loadButton, SIGNAL(clicked()), this, SLOT(openCSV()));
-  connect(filterButton, SIGNAL(clicked()), this, SLOT(filter()));
 }
 
 
@@ -73,20 +69,9 @@ void PollutantOverview::createToolBar()
 {
   QToolBar* toolBar = new QToolBar();
 
-  QLabel* significanceLabel = new QLabel("Significance");
-  significanceLabel->setAlignment(Qt::AlignVCenter);
-  toolBar->addWidget(significanceLabel);
-  toolBar->addWidget(significance);
-
-  QLabel* periodLabel = new QLabel("Period");
-  periodLabel->setAlignment(Qt::AlignVCenter);
-  toolBar->addWidget(periodLabel);
-  toolBar->addWidget(period);
-
   toolBar->addSeparator();
 
   toolBar->addWidget(loadButton);
-  toolBar->addWidget(filterButton);
 
   addToolBar(Qt::LeftToolBarArea, toolBar);
 }

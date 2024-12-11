@@ -25,16 +25,10 @@ int main(int argc, char* argv[])
   // Initialise Qt Application Pages
   DataPage dataPage;
   Dashboard dashboard;
-  PollutantOverview pollutantOverview;
-  PersistentPollutants persistantPollutants;
-  EnviromentalLitter enviromentalLitter;
 
   // Show Pages (temporary for testing)
   dashboard.show();
   dataPage.show();
-  pollutantOverview.show();
-  persistantPollutants.show();
-  enviromentalLitter.show();
 
   return app.exec();
 }

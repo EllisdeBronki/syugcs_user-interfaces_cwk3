@@ -17,14 +17,15 @@ static const QString TITLE = "Water Quality Monitor - Data Viewing";
 DataPage::DataPage(): QMainWindow(), statsDialog(nullptr)
 {
   createMainWidget();
-  createFileSelectors();
   createButtons();
   createToolBar();
   createStatusBar();
   addFileMenu();
   addHelpMenu();
 
-  setMinimumWidth(MIN_WIDTH);
+  int* screenSize = deduceWindowSize();
+  setMinimumWidth(screenSize[0] * .5);
+  setMinimumHeight(screenSize[1] * .5);
   setWindowTitle(TITLE);
 }
 
@@ -39,46 +40,32 @@ void DataPage::createMainWidget()
   setCentralWidget(table); 
 }
 
-void DataPage::createFileSelectors()
+int* DataPage::deduceWindowSize() 
 {
-  QStringList significanceOptions;
-  significanceOptions << "significant" << "4.5" << "2.5" << "1.0" << "all";
-  significance = new QComboBox();
-  significance->addItems(significanceOptions);
+  QScreen* screen = QGuiApplication::primaryScreen();
+  QRect screenMax = screen->availableGeometry();
 
-  QStringList periodOptions;
-  periodOptions << "hour" << "day" << "week" << "month";
-  period = new QComboBox();
-  period->addItems(periodOptions);
+  int* screenDims = new int[2];
+  screenDims[0] = screenMax.width();
+  screenDims[1] = screenMax.height();
+
+  return screenDims;
 }
 
 void DataPage::createButtons()
 {
   loadButton = new QPushButton("Load");
-  statsButton = new QPushButton("Stats");
 
   connect(loadButton, SIGNAL(clicked()), this, SLOT(openCSV()));
-  connect(statsButton, SIGNAL(clicked()), this, SLOT(displayStats()));
 }
 
 void DataPage::createToolBar()
 {
   QToolBar* toolBar = new QToolBar();
 
-  QLabel* significanceLabel = new QLabel("Significance");
-  significanceLabel->setAlignment(Qt::AlignVCenter);
-  toolBar->addWidget(significanceLabel);
-  toolBar->addWidget(significance);
-
-  QLabel* periodLabel = new QLabel("Period");
-  periodLabel->setAlignment(Qt::AlignVCenter);
-  toolBar->addWidget(periodLabel);
-  toolBar->addWidget(period);
-
   toolBar->addSeparator();
 
   toolBar->addWidget(loadButton);
-  toolBar->addWidget(statsButton);
 
   addToolBar(Qt::LeftToolBarArea, toolBar);
 }

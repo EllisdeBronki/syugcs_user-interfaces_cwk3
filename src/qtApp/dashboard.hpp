@@ -3,7 +3,14 @@
 #include <QMainWindow>
 #include <QString>
 #include <QtWidgets>
+
 #include "../hydromodel/hydromodel.hpp"
+#include "dashboard.hpp"
+#include "datapage.hpp"
+#include "dashboard.hpp"
+#include "pollutant-overview.hpp"
+#include "persistent-pollutants.hpp"
+#include "enviroment-litter.hpp"
 
 class QString;
 class QComboBox;
@@ -26,4 +33,16 @@ class Dashboard: public QMainWindow
   private:
     int* deduceWindowSize();
     void createMainWidget(int*);
+
+    PollutantOverview* popPage;
+    PersistentPollutants* porgpPage;
+    EnviromentalLitter* elipPage;
+  
+  public slots:
+    void showPop();
+    void showPorgp();
+    void showElip();
+    void showFcp();
+    void showCd();
+    void showGhp();
 };
