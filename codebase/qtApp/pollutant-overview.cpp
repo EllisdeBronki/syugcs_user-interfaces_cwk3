@@ -230,11 +230,13 @@ void PollutantOverview::openCSV()
 
     QBarCategoryAxis *axisX = new QBarCategoryAxis();
     axisX->append(categories);
+    axisX->setTitleText("Time (days)");
     chart->addAxis(axisX, Qt::AlignBottom);
     series->attachAxis(axisX);
 
     QValueAxis *axisY = new QValueAxis();
     axisY->setRange(0, 20);
+    axisY->setTitleText("Pollutant Level");
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
 
