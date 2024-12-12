@@ -1,5 +1,5 @@
 CMakeFiles/watertool.dir/hydromodel/waterbody.cpp.o: \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/waterbody.cpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/waterbody.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/stdexcept \
  /usr/include/c++/11/exception \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \
@@ -126,5 +126,5 @@ CMakeFiles/watertool.dir/hydromodel/waterbody.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/waterbody.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/waterbody.hpp \
  /usr/include/c++/11/iostream

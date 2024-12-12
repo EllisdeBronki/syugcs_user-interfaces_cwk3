@@ -1,5 +1,5 @@
 CMakeFiles/watertool.dir/qtApp/stats.cpp.o: \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/stats.cpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/stats.cpp \
  /usr/include/stdc-predef.h /usr/include/qt6/QtWidgets/QtWidgets \
  /usr/include/qt6/QtWidgets/QtWidgetsDepends \
  /usr/include/qt6/QtCore/QtCore /usr/include/qt6/QtCore/QtCoreDepends \
@@ -927,5 +927,5 @@ CMakeFiles/watertool.dir/qtApp/stats.cpp.o: \
  /usr/include/qt6/QtWidgets/qwidget.h \
  /usr/include/qt6/QtWidgets/qwidgetaction.h \
  /usr/include/qt6/QtWidgets/qwizard.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/stats.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/stats.hpp \
  /usr/include/qt6/QtWidgets/QDialog

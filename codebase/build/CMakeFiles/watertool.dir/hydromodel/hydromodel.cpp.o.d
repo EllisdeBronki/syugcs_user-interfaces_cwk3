@@ -1,7 +1,7 @@
 CMakeFiles/watertool.dir/hydromodel/hydromodel.cpp.o: \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/hydromodel.cpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/hydromodel.cpp \
  /usr/include/stdc-predef.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/hydromodel.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/hydromodel.hpp \
  /usr/include/qt6/QtCore/QAbstractTableModel \
  /usr/include/qt6/QtCore/qabstractitemmodel.h \
  /usr/include/qt6/QtCore/qhash.h /usr/include/qt6/QtCore/qalgorithms.h \
@@ -287,8 +287,8 @@ CMakeFiles/watertool.dir/hydromodel/hydromodel.cpp.o: \
  /usr/include/qt6/QtGui/qregion.h /usr/include/qt6/QtCore/qline.h \
  /usr/include/qt6/QtGui/qpixmap.h /usr/include/qt6/QtGui/QColor \
  /usr/include/qt6/QtGui/qcolor.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/hydroset.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/waterbody.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/hydroset.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/waterbody.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/basic_ios.h \
  /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \

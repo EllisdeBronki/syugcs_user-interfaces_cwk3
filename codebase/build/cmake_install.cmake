@@ -1,4 +1,4 @@
-# Install script for directory: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src
+# Install script for directory: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

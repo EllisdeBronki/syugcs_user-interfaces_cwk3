@@ -1,5 +1,5 @@
 CMakeFiles/watertool.dir/qtApp/datapage.cpp.o: \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/datapage.cpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/datapage.cpp \
  /usr/include/stdc-predef.h /usr/include/qt6/QtWidgets/QtWidgets \
  /usr/include/qt6/QtWidgets/QtWidgetsDepends \
  /usr/include/qt6/QtCore/QtCore /usr/include/qt6/QtCore/QtCoreDepends \
@@ -928,7 +928,7 @@ CMakeFiles/watertool.dir/qtApp/datapage.cpp.o: \
  /usr/include/qt6/QtWidgets/qwidgetaction.h \
  /usr/include/qt6/QtWidgets/qwizard.h /usr/include/qt6/QtGui/QColor \
  /usr/include/qt6/QtGui/QPainter /usr/include/c++/11/iostream \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/persistent-pollutants.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/persistent-pollutants.hpp \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtCharts/QtCharts \
  /usr/include/qt6/QtCharts/QtChartsDepends \
@@ -1046,15 +1046,15 @@ CMakeFiles/watertool.dir/qtApp/datapage.cpp.o: \
  /usr/include/qt6/QtCharts/qvpiemodelmapper.h \
  /usr/include/qt6/QtCharts/qvxymodelmapper.h \
  /usr/include/qt6/QtCharts/qxylegendmarker.h \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/../hydromodel/hydromodel.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/../hydromodel/hydromodel.hpp \
  /usr/include/qt6/QtCore/QAbstractTableModel \
  /usr/include/qt6/QtGui/QBrush \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/../hydromodel/hydroset.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/../hydromodel/waterbody.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/dashboard.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/../hydromodel/hydroset.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/../hydromodel/waterbody.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/dashboard.hpp \
  /usr/include/qt6/QtCore/QString \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/datapage.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/pollutant-overview.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/enviroment-litter.hpp \
- /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/stats.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/datapage.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/pollutant-overview.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/enviroment-litter.hpp \
+ /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/stats.hpp \
  /usr/include/qt6/QtWidgets/QDialog

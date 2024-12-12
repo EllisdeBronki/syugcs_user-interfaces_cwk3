@@ -1,8 +1,8 @@
-/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/DGLIDOPP5O/moc_enviroment-litter.cpp: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/qtApp/enviroment-litter.hpp \
-  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/build/watertool_autogen/moc_predefs.h \
-  /uolstore/home/student_lnxhome01/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/hydromodel.hpp \
-  /uolstore/home/student_lnxhome01/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/hydroset.hpp \
-  /uolstore/home/student_lnxhome01/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/src/hydromodel/waterbody.hpp \
+/uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/build/watertool_autogen/DGLIDOPP5O/moc_enviroment-litter.cpp: /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/qtApp/enviroment-litter.hpp \
+  /uolstore/home/users/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/build/watertool_autogen/moc_predefs.h \
+  /uolstore/home/student_lnxhome01/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/hydromodel.hpp \
+  /uolstore/home/student_lnxhome01/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/hydroset.hpp \
+  /uolstore/home/student_lnxhome01/sc22ajdb/remote-repo/syug/user-interfaces/cwk3/codebase/hydromodel/waterbody.hpp \
   /usr/include/GL/gl.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

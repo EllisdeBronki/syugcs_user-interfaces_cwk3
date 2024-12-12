@@ -1,8 +1,8 @@
 rm -r build
 cd ..
-cmake -S src -B src/build
+cmake -S codebase -B codebase/build
 echo "CMake Successful"
-cd src/build
+cd codebase/build
 make
 echo "Make Successful"
 ./watertool
