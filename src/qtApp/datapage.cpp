@@ -12,7 +12,7 @@
 #include "stats.hpp"
 
 static const int MIN_WIDTH = 1200;
-static const QString TITLE = "Water Quality Monitor - Data Viewing";
+static const QString TITLE = "Water Quality Monitor - Compliance Dashboard";
 
 static const int SAMPLE_COMPIANT = 9;
 static const QModelIndex NUL;
