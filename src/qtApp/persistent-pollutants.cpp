@@ -233,13 +233,13 @@ void PersistentPollutants::openCSV()
 
     QBarCategoryAxis *axisX = new QBarCategoryAxis();
     axisX->append(categories);
-    axisX->setTitleText("Timestamp")
+    axisX->setTitleText("Timestamp");
     chart->addAxis(axisX, Qt::AlignBottom);
     series->attachAxis(axisX);
 
     QValueAxis *axisY = new QValueAxis();
     axisY->setRange(0, 20);
-    axisY->setTitleText("Persistant Pollutant Level")
+    axisY->setTitleText("Persistant Pollutant Level");
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
 
