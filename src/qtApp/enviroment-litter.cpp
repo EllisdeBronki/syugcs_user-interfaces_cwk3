@@ -12,6 +12,7 @@ const QVariant SELECT_DETERMINAND  = "Cond @ 25C";
 const QVariant SELECT_SAMPLE_POINT = "SEMER WATER";
 
 static const int         READ         = 0;
+static const long        EPOCH        = 1262304000000;
 
 static const int         SAMPLE_POINT = 0;
 static const int         TIME         = 1;
@@ -177,7 +178,7 @@ void EnviromentalLitter::openCSV()
     series->attachAxis(axisX);
 
     QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(0, 20);
+    axisY->setRange(0, 300);
     axisY->setTitleText("Result");
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
@@ -194,8 +195,9 @@ void EnviromentalLitter::openCSV()
 
 void EnviromentalLitter::about()
 {
-  QMessageBox::about(this, "About Watertool",
-    "Watertool displays and analyzes water quality from"
-    "a CSV file produced by the UK Government\n"
+  QMessageBox::about(this, "About Enviromental Litter Indicators",
+    "This tool polts the level of specific pollutants over time, giving a "
+    "possible indication on the change of the amount, and types of litter "
+    "at specific locations."
     );
 }

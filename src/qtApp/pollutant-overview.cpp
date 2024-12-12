@@ -189,8 +189,10 @@ void PollutantOverview::openCSV()
 
 void PollutantOverview::about()
 {
-  QMessageBox::about(this, "About Watertool",
-    "Watertool displays and analyzes water quality from"
-    "a CSV file produced by the UK Government\n"
+  QMessageBox::about(this, "About Pollutant Overview",
+    "This tool allows you view the current levels of pollutants in specific "
+    "to give you a quick overview, as well as helpful colour coding of the "
+    "bars which give an indication on where these levels stand against EU/UK "
+    "regulation."
     );
 }

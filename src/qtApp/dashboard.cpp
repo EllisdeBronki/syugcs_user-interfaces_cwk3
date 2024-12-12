@@ -149,7 +149,8 @@ void Dashboard::showFcp()
 
 void Dashboard::showCd()
 {
-  return;
+  cdPage = new DataPage();
+  cdPage->show();
 }
 
 void Dashboard::showGhp()

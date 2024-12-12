@@ -1,4 +1,6 @@
 #include <QtWidgets>
+#include <QColor>
+#include <QPainter>
 #include <stdexcept>
 #include <iostream>
 
@@ -7,6 +9,10 @@
 
 static const int MIN_WIDTH = 1200;
 static const QString TITLE = "Water Quality Monitor - Data Viewing";
+
+static const int SAMPLE_COMPIANT = 9;
+static const QModelIndex NUL;
+static const int READ = 0;
 
 /* -------------------------------------- **
  * Watertool : Water Window               *
@@ -127,9 +133,9 @@ void DataPage::openCSV()
     return;
   }
 
-  auto filename = QString("%1_%2.csv");
+  auto filename = QString("Y-2024.csv");
 
-  auto path = dataLocation + "/" + "Y-2024.csv";
+  auto path = dataLocation + "/" + filename;
 
   try {
     model.updateFromFile(path);
@@ -141,6 +147,7 @@ void DataPage::openCSV()
 
   fileInfo->setText(QString("Current file: <kbd>%1</kbd>").arg(filename));
   table->resizeColumnsToContents();
+  table->viewport()->update();
 
   if (statsDialog != nullptr && statsDialog->isVisible()) {
     statsDialog->update(model.meanResult(), model.meanResult());
@@ -149,8 +156,10 @@ void DataPage::openCSV()
 
 void DataPage::about()
 {
-  QMessageBox::about(this, "About Watertool",
-    "Watertool displays and analyzes water quality from"
-    "a CSV file produced by the UK Government\n"
+  QMessageBox::about(this, "About Compliance Data Page",
+    "This tool allows you to load in a formatted CSV from government websites "
+    "and view the raw data for yourself. It also comes with helpful colour "
+    "indicators that help you quickly distinguish which rows meet EU/UK "
+    "regulation, and which ones don't. "
     );
 }

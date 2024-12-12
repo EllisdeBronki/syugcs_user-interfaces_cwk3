@@ -37,6 +37,17 @@ QVariant Hydromodel::data(const QModelIndex& index, int role) const
       case 9: return QVariant(q.getSampleCompliant().c_str());
     }
   }
+  else if (role == Qt::BackgroundRole) {
+    if (hydroset[index.row()].getSampleCompliant() == "false") {
+      return QBrush(QColor(255, 160, 160));
+    } else {
+      if(hydroset[index.row()].getResultQualifier() == "<") {
+        return QBrush(QColor(255, 191, 0));
+      } else {
+        return QBrush(QColor(144, 238, 144));
+      }
+    }
+  }
 
   return QVariant();
 }

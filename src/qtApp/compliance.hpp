@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
-#include "hydromodel.hpp"
+#include "../hydromodel/hydromodel.hpp"
 
 class QString;
 class QComboBox;

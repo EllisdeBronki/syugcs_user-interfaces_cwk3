@@ -193,8 +193,11 @@ void PersistentPollutants::openCSV()
 
 void PersistentPollutants::about()
 {
-  QMessageBox::about(this, "About Watertool",
-    "Watertool displays and analyzes water quality from"
-    "a CSV file produced by the UK Government\n"
+  QMessageBox::about(this, "About Persistant Organic Pollutants",
+    "This tool plots the level of specific pollutants over time, giving a "
+    "possible indication on the change of the amount, and types of industrial "
+    "chemcials that are present in the area, potentially from the use of "
+    "pesticides, chemicals or other potential sources that pose a risk of "
+    "polluting the enviroment, and possible the food chain."
     );
 }

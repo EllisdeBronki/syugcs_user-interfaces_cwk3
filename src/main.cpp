@@ -23,12 +23,10 @@ int main(int argc, char* argv[])
   QApplication app(argc, argv);
 
   // Initialise Qt Application Pages
-  DataPage dataPage;
   Dashboard dashboard;
 
   // Show Pages (temporary for testing)
   dashboard.show();
-  dataPage.show();
 
   return app.exec();
 }

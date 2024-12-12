@@ -4,6 +4,7 @@
 #include <iostream>
 
 static const int MIN_WIDTH = 1200;
+static const QModelIndex NUL;
 
 /* -------------------------------------- **
  * Compliance Dashboard                   *
@@ -52,7 +53,7 @@ void ComplianceDashboardWindow::applyFilters() {
     QString complianceCriteria = complianceFilter->currentText();
 
     // Iterate through all rows in the model
-    for for (int row = 0; row < model.rowCount(NUL); ++row) {
+    for (int row = 0; row < model.rowCount(NUL); ++row) {
         bool matches = true;
 
         // Location filter

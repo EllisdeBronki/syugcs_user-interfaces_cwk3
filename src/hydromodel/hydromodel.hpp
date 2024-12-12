@@ -1,6 +1,9 @@
 #pragma once
 
 #include <QAbstractTableModel>
+#include <QBrush>
+#include <QColor>
+
 #include "hydroset.hpp"
 
 /* -------------------------------------- **

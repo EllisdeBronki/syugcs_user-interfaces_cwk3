@@ -37,6 +37,7 @@ class Dashboard: public QMainWindow
     PollutantOverview* popPage;
     PersistentPollutants* porgpPage;
     EnviromentalLitter* elipPage;
+    DataPage* cdPage;
   
   public slots:
     void showPop();
