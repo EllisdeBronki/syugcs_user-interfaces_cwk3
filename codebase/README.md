@@ -1,77 +1,104 @@
 # Project Title: COMP2811 UI Final Project Coursework
 
+## Our Team : New Group 40
+In alphabetical order, name and student ID:
+
+- Alexander Del Brocco | 201-492-689
+- Thomas Onions        | 201-710-138
+- Callum Soleit        | Not Present at Submission
+- Kim Smith            | Not Present at Submission
+- Zhi Qing Cheng       | Not Present at Submission
+
 ## Overview
 This application is designed to monitor and analyse water quality data, with a focus on pollutant tracking and compliance with safety standards. It was developed using **C++/Qt6** with a modular and user-friendly interface that adapts to changes in locale for basic internationalisation.
 
-## Getting Started
+It has working data visualisations of pollutant overviews, persistant pollutants and a compliance table
+
+## Set-up Instructions
 
 ### Prerequisites
 - **C++17** or higher
 - **Qt6** libraries, including:
     - **QtWidgets**
     - **QtCharts**
-    - **QtWebView** (optional, for web content)
+    - **QPainter**
+    - **QColor**
+    - **QGridLayout**
+    - **QPushButtons**
 
 ### Installation and Setup
 1. **Extract the Starter Code**: 
  - Unzip the provided starter code package to a working directory.
 2. **Build the Project**:
-    - Create a `build` directory and run `cmake`:
+    - Create a `build` directory:
       ```bash
-      mkdir build && cd build
-      cmake ..
+      mkdir build
       ```
-    - Compile the project:
+    - Compile and Run the project:
       ```bash
-      make
-      ```
-    - Run the application:
-      ```bash
-      ./[application-executable-name]
+        run.sh
       ```
 
-3. **Data Setup**:
-    - Place your CSV dataset in the specified directory (`/data` folder).
-    - Ensure that the application has access to the data file, and adjust file paths as necessary.
+## File Structure
 
-## Application Structure
+codebase
+- build
+- hydromodel
+- qtApp
+- data
+- CMakeLists.txt
+- main.cpp
+- run.sh
+- README.md
 
-### Main Components
-- **Dashboard**: Provides an overview of the application’s main pages and core functionality.
-- **Data Page**: Displays pollutant data in a table format, allowing us to browse relevant fields. Utilises the model/view architecture from the starter code.
-- **Analysis Pages**:
-    - **Pollutant Trends**: Visualises changes in pollutant levels over time.
-    - **Safety Compliance**: Displays alerts for pollutant levels that exceed recommended limits.
-    - **Geographical Hotspots**: Provides a map view or heat map of sampling points.
-    - **Summary Statistics**: Calculates and displays averages, maximums, minimums, and other summary data.
+### Build
+The build folder contains the construction and executible of the application 
+for now, as the application hasn't finished development. Despite the executible 
+being located here, the primary way to run the program is "run.sh", which 
+recompiles the code so the newest version is created, especially if it's on a 
+different operating system.
 
-## Key Features
-- **Internationalisation**: The app supports language changes based on system locale settings.
-- **Modular UI**: Using a "card" approach, each data type or control is grouped logically within the interface.
-- **Tooltips**: Hovering over elements displays additional context, improving usability.
+### hydromodel
+The hydromodel is the object oriented approach to the solution, modifying the 
+previous "quaketool" code and configuring it to contain data from a formatted 
+CSV file, setting the logical ground work. Inside it are:
+- Hydromodel.hpp/cpp ~ Contains a Hydroset, and data functions
+- Hydroset.hpp/cpp  ~ Contains a Waterbody Vector, which it indexes
+- Waterbody.hpp/cpp ~ Contains fields for each row
+- csv.hpp ~ Imported CSV handler
 
-## Design Choices
-- **Model/View Architecture**: Chosen for flexibility in data handling and to separate data presentation from underlying storage.
-- **Data Visualisation**: Includes basic charts and compliance indicators to ensure intuitive data interpretation.
-- **"Card" Layout**: The UI is modularised into “cards,” each focused on a specific data group or control area.
+### qtApp
+The qtApp directory contains the working pages/widgets of the qt application.
+You should be forewarned that the code quality is poor and uncommented, as 
+these were foresaken to achieve some demostraightable working product.
+Each application page it's own set of files, represented by:
+- dashboard.hpp/cpp ~ The main opening window when the user opens the app
+- pollutant-overview.hpp/cpp
+- persistent-pollutants.hpp/cpp
+- enviroment-litter.hpp/cpp
+- datapage.hpp/cpp ~ the compliance dashboard, modified datapage
+- stats.hpp/cpp ~ This isn't a page, it's for data handling
 
-## Included Files
-- **Source Files**: Core source files such as `main.cpp`, `dataset.cpp`, `model.cpp`, etc.
-- **Consent and Participant Information Sheet (PIS)**: Blank templates for ethical compliance, as required in evaluations.
-- **COMP2811_CW3_Requirements** Detailed requirements and expectations for the project.
-- **COMP2811 Feedback Fruits Tasks Overview**: List of required Feedback Fruits tasks
+### data
+This directory is primarily for containing the CSV that the computer will read
+
+### run.sh
+This is the main file for compilation and running of the program, which
+uses a bash script combined with the CMakeLists.txt to generate an 
+executible in the build folder.
+
 ## Known Issues
-- List any known bugs or limitations here. This may include compatibility issues, unsupported data formats, etc.
 
-## Future Development
-- Briefly describe potential features, optimisations, or additional datasets that could be integrated in future versions.
+- Code desperately needs modularisation and commenting 
 
-## Acknowledgments
-- Acknowledge any sources, datasets, or resources that contributed to this project.
-- I would like to thank Nick Efford for all his work on this module.
-- Samson Fabiyi and Danyang Zheng for their input and management of XJCO2811 at SWJTU.
+- Dashboard sizes correctly, but does not resize correctly
 
-## Contact
-For questions or collaboration inquiries, contact:
-- **[Julian Brooks]** - [j.brooks2@leeds.ac.uk]
-- **Module:** COMP2811 - User Interfaces - University of Leeds
+- Time Series graph in Enviromental Litter doesn't always load data correctly
+
+- XAxis in most data visualisations are too big to comprehend
+
+- Data visualisations have parameters hardcoded in, not inputtable by avg user
+
+- Data Axis Scope is hardcoded in, and doesn't adjust depending on data
+
+- All pages are visible on nav bar and dashboard but aren't implemented
