@@ -40,6 +40,7 @@ class PersistentPollutants: public QMainWindow
     void createStatusBar();
     void addFileMenu();
     void addHelpMenu();
+    void addNavMenu();
 
     Hydromodel model;          // data model used by table
     QString dataLocation;      // location of CSV data files
@@ -51,8 +52,15 @@ class PersistentPollutants: public QMainWindow
     QStringList categories;
     QLabel* fileInfo;          // status bar info on current file
 
+
   private slots:
     void setDataLocation();
     void openCSV();
     void about();
+
+    void toDashboard();
+    void toPollutantOverview();
+    void toPersistentPollutants();
+    void toEnviromentalLitter();
+    void toComplianceData();
 };

@@ -7,9 +7,7 @@
 #include <iostream>
 
 #include "dashboard.hpp"
-#include "dashboard.hpp"
 #include "datapage.hpp"
-#include "dashboard.hpp"
 #include "pollutant-overview.hpp"
 #include "persistent-pollutants.hpp"
 #include "enviroment-litter.hpp"

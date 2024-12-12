@@ -4,7 +4,11 @@
 #include <stdexcept>
 #include <iostream>
 
+#include "persistent-pollutants.hpp"
+#include "dashboard.hpp"
 #include "datapage.hpp"
+#include "pollutant-overview.hpp"
+#include "enviroment-litter.hpp"
 #include "stats.hpp"
 
 static const int MIN_WIDTH = 1200;
@@ -28,6 +32,7 @@ DataPage::DataPage(): QMainWindow(), statsDialog(nullptr)
   createStatusBar();
   addFileMenu();
   addHelpMenu();
+  addNavMenu();
 
   int* screenSize = deduceWindowSize();
   setMinimumWidth(screenSize[0] * .5);
@@ -110,6 +115,62 @@ void DataPage::addHelpMenu()
   QMenu* helpMenu = menuBar()->addMenu("&Help");
   helpMenu->addAction(aboutAction);
   helpMenu->addAction(aboutQtAction);
+}
+
+void DataPage::addNavMenu()
+{
+  QAction* dashboard = new QAction("&Dashboard", this);
+  connect(dashboard, SIGNAL(triggered()), this, SLOT(toDashboard()));
+
+  QAction* pop = new QAction("Pollutant Overview", this);
+  connect(pop, SIGNAL(triggered()), this, SLOT(toPollutantOverview()));
+
+  QAction* porgp = new QAction("Persistant Organic Pollutants", this);
+  connect(porgp, SIGNAL(triggered()), this, SLOT(toPersistantPollutents()));
+
+  QAction* elip = new QAction("Enviromental Litter Indicators", this);
+  connect(elip, SIGNAL(triggered()), this, SLOT(toEnviromentalLitter()));
+
+  QAction* cd = new QAction("Compliance Data", this);
+  connect(cd, SIGNAL(triggered()), this, SLOT(toComplianceData()));
+
+
+  QMenu* navMenu = menuBar()->addMenu("Nav");
+  navMenu->addAction(dashboard);
+  navMenu->addAction(pop);
+  navMenu->addAction(porgp);
+  navMenu->addAction(elip);
+  navMenu->addAction(cd);
+}
+
+void DataPage::toDashboard()
+{
+  Dashboard* dash = new Dashboard();
+  dash->show();
+}
+
+void DataPage::toPollutantOverview()
+{
+  PollutantOverview* poll = new PollutantOverview();
+  poll->show();
+}
+
+void DataPage::toPersistentPollutants()
+{
+  PersistentPollutants* pers = new PersistentPollutants();
+  pers->show();
+}
+
+void DataPage::toEnviromentalLitter() 
+{
+  EnviromentalLitter* enir = new EnviromentalLitter();
+  enir->show(); 
+}
+
+void DataPage::toComplianceData()
+{
+  DataPage* data = new DataPage();
+  data->show();
 }
 
 void DataPage::setDataLocation()

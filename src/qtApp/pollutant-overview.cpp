@@ -3,7 +3,11 @@
 #include <stdexcept>
 #include <iostream>
 
+#include "persistent-pollutants.hpp"
+#include "dashboard.hpp"
+#include "datapage.hpp"
 #include "pollutant-overview.hpp"
+#include "enviroment-litter.hpp"
 
 static const int MIN_WIDTH = 1200;
 static const QString TITLE = "Water Quality Monitor - Pollutant Overview";
@@ -31,6 +35,7 @@ PollutantOverview::PollutantOverview(): QMainWindow()
   createStatusBar();
   addFileMenu();
   addHelpMenu();
+  addNavMenu();
 
   int* screenSize = deduceWindowSize();
   setMinimumWidth(screenSize[0] * .5);
@@ -113,6 +118,61 @@ void PollutantOverview::addHelpMenu()
   helpMenu->addAction(aboutQtAction);
 }
 
+void PollutantOverview::addNavMenu()
+{
+  QAction* dashboard = new QAction("&Dashboard", this);
+  connect(dashboard, SIGNAL(triggered()), this, SLOT(toDashboard()));
+
+  QAction* pop = new QAction("Pollutant Overview", this);
+  connect(pop, SIGNAL(triggered()), this, SLOT(toPollutantOverview()));
+
+  QAction* porgp = new QAction("Persistant Organic Pollutants", this);
+  connect(porgp, SIGNAL(triggered()), this, SLOT(toPersistantPollutents()));
+
+  QAction* elip = new QAction("Enviromental Litter Indicators", this);
+  connect(elip, SIGNAL(triggered()), this, SLOT(toEnviromentalLitter()));
+
+  QAction* cd = new QAction("Compliance Data", this);
+  connect(cd, SIGNAL(triggered()), this, SLOT(toComplianceData()));
+
+
+  QMenu* navMenu = menuBar()->addMenu("Nav");
+  navMenu->addAction(dashboard);
+  navMenu->addAction(pop);
+  navMenu->addAction(porgp);
+  navMenu->addAction(elip);
+  navMenu->addAction(cd);
+}
+
+void PollutantOverview::toDashboard()
+{
+  Dashboard* dash = new Dashboard();
+  dash->show();
+}
+
+void PollutantOverview::toPollutantOverview()
+{
+  PollutantOverview* poll = new PollutantOverview();
+  poll->show();
+}
+
+void PollutantOverview::toPersistentPollutants()
+{
+  PersistentPollutants* pers = new PersistentPollutants();
+  pers->show();
+}
+
+void PollutantOverview::toEnviromentalLitter() 
+{
+  EnviromentalLitter* enir = new EnviromentalLitter();
+  enir->show(); 
+}
+
+void PollutantOverview::toComplianceData()
+{
+  DataPage* data = new DataPage();
+  data->show();
+}
 
 void PollutantOverview::setDataLocation()
 {
@@ -136,9 +196,9 @@ void PollutantOverview::openCSV()
     return;
   }
 
-  auto filename = QString("%1_%2.csv");
+  auto filename = QString("Y-2024.csv");
 
-  auto path = dataLocation + "/" + "Y-2024.csv";
+  auto path = dataLocation + "/" + filename;
 
   try {
     model.updateFromFile(path);
